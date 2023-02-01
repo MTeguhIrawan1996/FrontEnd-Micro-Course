@@ -1,6 +1,6 @@
 export const TypingText = ({ title, textStyles }) => (
   <p
-    className={`font-medium text-[16px] text-zinc-500 ${
+    className={`font-medium text-[16px] text-secondary-black ${
       textStyles ? textStyles : ""
     }`}
   >

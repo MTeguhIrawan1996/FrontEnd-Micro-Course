@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "../../styles";
-import { TitleText, TypingText } from "../../components";
+import { ListClasses, TitleText, TypingText } from "../../components";
 
 const NewClases = () => {
   return (
     <section className={`${styles.paddings}`}>
       <div
-        className={`${styles.innerWidth} lg:px-12 mx-auto flex justify-center items-center flex-col gap-7`}
+        className={`${styles.innerWidth} lg:px-12 mx-auto flex justify-center items-center flex-col gap-6`}
       >
         <div className="flex justify-between items-center w-full">
           <div className="flex flex-col">
@@ -17,7 +17,7 @@ const NewClases = () => {
                   Summer <span className="text-primary-hover">Productive</span>
                 </>
               }
-              textStyles="text-black md:text-[24px] text-[18px] text-primary-black"
+              textStyles="md:text-[24px] text-[18px] text-primary-black"
             />
           </div>
           <TypingText
@@ -25,7 +25,7 @@ const NewClases = () => {
             textStyles="cursor-pointer text-[12px] underline underline-offset-2 hover:text-primary-hover"
           />
         </div>
-        <div className="">Tes1</div>
+        <ListClasses />
       </div>
     </section>
   );

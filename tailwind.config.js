@@ -11,6 +11,7 @@ module.exports = {
         "secondary-color": "#4D55BC",
         "primary-hover": "#36C2CF",
         "primary-black": "#27272a",
+        "secondary-black": "#6b7280",
       },
       transitionProperty: {
         transform: "transform",

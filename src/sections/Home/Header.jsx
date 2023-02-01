@@ -4,6 +4,7 @@ import Circle from "../../../public/images/circle-accent-1.svg";
 import { TitleText } from "../../components/CustomTexts";
 import Navbar from "../../components/Navbar";
 import Button from "../../components/Button";
+import Image from "next/image";
 
 const Header = () => {
   return (
@@ -41,7 +42,9 @@ const Header = () => {
           <img
             src="/hero.png"
             alt="hero"
-            className="w-[340px] h-[400px] object-contain z-10"
+            width={350}
+            height={440}
+            className="object-contain z-10 rounded-l-[50px]"
           />
           <div className="flex flex-col justify-start items-start px-5 py-2 gap-2 bg-white w-[290px] absolute left-[10%] top-[-20px] rounded-lg drop-shadow-lg z-20">
             <h1 className="text-zinc-600 font-semibold">
