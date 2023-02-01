@@ -7,9 +7,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "primary-color": "#1A232E",
+        "primary-color": "#2E37A4",
         "secondary-color": "#4D55BC",
         "primary-hover": "#36C2CF",
+        "primary-black": "#27272a",
       },
       transitionProperty: {
         transform: "transform",

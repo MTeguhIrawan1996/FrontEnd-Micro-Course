@@ -1,41 +1,18 @@
 import React from "react";
-import Image from "next/image";
-import styles from "../styles";
-import Circle from "../../public/images/circle-accent-1.svg";
-import Link from "next/link";
-import { links } from "../constants";
-import { TitleText } from "./CustomTexts";
-import Button from "./Button";
-import Logo from "../../public/images/logo.svg";
+import styles from "../../styles";
+import Circle from "../../../public/images/circle-accent-1.svg";
+import { TitleText } from "../../components/CustomTexts";
+import Navbar from "../../components/Navbar";
+import Button from "../../components/Button";
 
 const Header = () => {
   return (
-    <section className={`${styles.xPaddings} py-8 relative bg-indigo-900`}>
+    <section className={`${styles.xPaddings} py-8 relative bg-primary-color`}>
       <div className="absolute top-0 gradient-01 z-0" />
-      <Image
-        src={Circle}
-        alt="Circle"
-        className="absolute left-0 bottom-0 w-[20%] aspect-square"
-      />
+      <Circle className="absolute left-0 bottom-0 w-[20%] aspect-square" />
+      <Navbar />
       <div
-        className={`${styles.innerWidth} mx-auto flex justify-between items-center`}
-      >
-        <Image src={Logo} alt="Logo" className="w-12 aspect-square" />
-        <div className="flex justify-center items-center gap-8">
-          {links.map((link, i) => (
-            <Link
-              href={`${link.to}`}
-              key={i}
-              className="md:block hidden text-white text-base font-medium z-10 transition-all ease-in duration-300 hover:text-primary-hover"
-            >
-              {link.name}
-            </Link>
-          ))}
-          <Button text="Masuk" />
-        </div>
-      </div>
-      <div
-        className={`${styles.yPaddings} lg:px-12 lg:mt-6 flex lg:flex-row flex-col justify-center items-center lg:items-start lg:gap-0 gap-16`}
+        className={`${styles.yPaddings} ${styles.innerWidth} mx-auto lg:px-12 lg:mt-6 flex lg:flex-row flex-col justify-center items-center lg:items-start lg:gap-0 gap-16`}
       >
         <div className="flex-[0.85] z-10 flex flex-col justify-center items-center gap-6">
           <TitleText
