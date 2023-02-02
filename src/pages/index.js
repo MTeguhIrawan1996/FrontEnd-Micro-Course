@@ -1,5 +1,5 @@
 import Layout from "./layout/layout";
-import { Header, NewClases, Partners } from "../sections";
+import { Category, Header, NewClases, Partners } from "../sections";
 
 export default function Home() {
   return (
@@ -7,6 +7,7 @@ export default function Home() {
       <Header />
       <Partners />
       <NewClases />
+      <Category />
     </Layout>
   );
 }

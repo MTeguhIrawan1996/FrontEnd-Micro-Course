@@ -46,7 +46,7 @@ const Header = () => {
             height={440}
             className="object-contain z-10 rounded-l-[50px]"
           />
-          <div className="flex flex-col justify-start items-start px-5 py-2 gap-2 bg-white w-[290px] absolute left-[10%] top-[-20px] rounded-lg drop-shadow-lg z-20">
+          <div className="flex flex-col justify-start items-start px-5 py-2 gap-2 bg-white w-[300px] absolute left-[10%] top-[-20px] rounded-lg drop-shadow-lg z-20">
             <h1 className="text-zinc-600 font-semibold">
               Metode belajar yang santai seperti nonton drakor di Netflix
             </h1>
@@ -54,7 +54,7 @@ const Header = () => {
               Alyssa, Apps Developer
             </span>
           </div>
-          <div className="border-solid border-2 border-secondary-color w-[40%] aspect-square absolute right-[20%] top-[-10%] z-0" />
+          <div className="border-solid border-2 border-secondary-color w-[320px] aspect-square absolute right-[20%] top-[-10%] z-0 scale-110" />
         </div>
       </div>
     </section>

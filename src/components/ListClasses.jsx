@@ -20,8 +20,8 @@ const ListClasses = () => {
               alt={data.title}
               className="w-full h-full object-cover"
             />
-            <div className="absolute opacity-0 hover:opacity-100 bg-primary-hover/10 inset-0 backdrop-blur-sm transition-all ease-cubic-bezier duration-300 delay-0 cursor-pointer flex justify-center items-center w-full group">
-              <div className="w-[50px] opacity-0 aspect-square bg-orange-400 flex justify-center items-center rounded-full group-hover:opacity-100 transition-all ease-linear duration-300 delay-0">
+            <div className="absolute opacity-0 hover:opacity-100 bg-primary-hover/10 inset-0 backdrop-blur-sm transition-all ease-linear duration-300 delay-0 cursor-pointer flex justify-center items-center w-full group">
+              <div className="w-[50px] opacity-0 aspect-square bg-orange-400 flex justify-center items-center rounded-full group-hover:opacity-100 transition-opacity ease-linear duration-[0.5s] delay-0">
                 <IconPlay className="w-[80%] aspect-square" />
               </div>
             </div>
