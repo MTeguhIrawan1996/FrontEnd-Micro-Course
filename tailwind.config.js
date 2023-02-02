@@ -12,6 +12,7 @@ module.exports = {
         "primary-hover": "#36C2CF",
         "primary-black": "#27272a",
         "secondary-black": "#6b7280",
+        "footer-color": "#161A4F",
       },
       transitionProperty: {
         transform: "transform",
