@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../styles";
 import Link from "next/link";
 import footer from "../constants/footer";
 import Button from "./Button";
+import Input from "./Input";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+
   return (
     <footer className={`sm:px-16 px-6 pt-12 bg-footer-color mt-12`}>
       <div className={`${styles.innerWidth} lg:px-12 mx-auto`}>
@@ -39,11 +42,17 @@ const Footer = () => {
               <p className="text-secondary-black">
                 Submit your emil for new update
               </p>
-              <div className="flex md:justify-start justify-start items-start w-full flex-wrap">
-                <input
-                  className="px-4 py-2 hover:outline-none focus:outline-none bg-white text-sm font-normal placeholder:font-light lg:w-[50%] max-w-full drop-shadow-lg"
-                  placeholder="Your Email Address"
-                />
+              <div className="flex md:justify-start justify-start items-start w-full">
+                <div className="flex-1">
+                  <Input
+                    placeholder="Your email"
+                    type="email"
+                    name="email"
+                    onChange={(e) => setEmail(e.target.value)}
+                    value={email}
+                    autoComplete="off"
+                  />
+                </div>
                 <Button
                   text="Daftar Now"
                   styles="rounded-none text-sm bg-orange-400"

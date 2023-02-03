@@ -4,6 +4,7 @@ import Button from "./Button";
 import { TypingText, TitleText } from "./CustomTexts";
 import ListClasses from "./ListClasses";
 import ListCategory from "./ListCategory";
+import Input from "./Input";
 
 export {
   Footer,
@@ -13,4 +14,5 @@ export {
   Navbar,
   ListClasses,
   ListCategory,
+  Input,
 };

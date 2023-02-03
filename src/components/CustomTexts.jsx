@@ -10,7 +10,7 @@ export const TypingText = ({ title, textStyles }) => (
 
 export const TitleText = ({ title, textStyles }) => (
   <h2
-    className={`font-semibold md:text-[42px] text-[34px] md:text-start text-center text-white ${
+    className={`md:text-[42px] text-[34px] md:text-start text-center text-white font-semibold ${
       textStyles ? textStyles : ""
     }`}
   >

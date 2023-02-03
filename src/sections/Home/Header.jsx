@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../../styles";
 import Circle from "../../../public/images/circle-accent-1.svg";
 import { TitleText } from "../../components/CustomTexts";
 import Navbar from "../../components/Navbar";
-import Button from "../../components/Button";
+import Link from "next/link";
+import { Input } from "../../components";
 
 const Header = () => {
+  const [email, setEmail] = useState("");
   return (
     <section className={`${styles.xPaddings} py-8 relative bg-primary-color`}>
       <div className="absolute top-0 gradient-01 z-0" />
       <Circle className="absolute left-0 bottom-0 w-[20%] aspect-square" />
-      <Navbar />
+      <Navbar iconStyle="text-white" linkStyle="text-white" />
       <div
         className={`${styles.yPaddings} ${styles.innerWidth} mx-auto lg:px-12 lg:mt-6 flex lg:flex-row flex-col justify-center items-center lg:items-start lg:gap-0 gap-16`}
       >
@@ -27,14 +29,22 @@ const Header = () => {
             We provide tons of pathskill that you can choose and focus on
           </p>
           <div className="flex md:justify-start justify-center items-start w-full">
-            <input
-              className="px-4 py-2 hover:outline-none focus:outline-none bg-white text-sm font-normal placeholder:font-light lg:w-1/2 max-w-full drop-shadow-lg"
-              placeholder="Your Email Address"
-            />
-            <Button
-              text="Daftar Now"
-              styles="rounded-none text-sm bg-orange-400"
-            />
+            <div className="flex-1">
+              <Input
+                placeholder="Your email"
+                type="email"
+                name="email"
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
+                autoComplete="off"
+              />
+            </div>
+            <Link
+              href="/signup"
+              className="px-6 py-2 text-white font-medium z-10 hover:bg-primary-hover focus:ring-2 focus:ring-sky-300 transition-all ease-cubic-bezier duration-300 delay-0 active:bg-secondary-color drop-shadow-lg rounded-none text-sm bg-orange-400"
+            >
+              Daftar Now
+            </Link>
           </div>
         </div>
         <div className="flex-[1.15] z-10 w-full lg:flex hidden justify-center items-center relative">
