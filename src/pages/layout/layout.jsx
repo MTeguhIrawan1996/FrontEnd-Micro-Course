@@ -12,7 +12,7 @@ const layout = ({ children, title }) => {
       </Head>
       <div className="bg-white overflow-hidden">
         <main>{children}</main>
-        <Footer />
+        {title !== "404" && <Footer />}
       </div>
     </>
   );

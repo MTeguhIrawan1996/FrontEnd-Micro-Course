@@ -13,8 +13,10 @@ const Footer = () => {
             {footer.map((data, i) => (
               <div
                 className={`${
-                  i === 0 || i === 1 ? "lg:flex-[2]" : "lg:flex-[3]"
-                } flex flex-col gap-4 lg:w-full w-[40%]`}
+                  i === 0 || i === 1
+                    ? "lg:flex-[2] w-[40%]"
+                    : "lg:flex-[3] w-full"
+                } flex flex-col gap-4 lg:w-full`}
                 key={i}
               >
                 <h2 className="text-lg text-white">{data.title}</h2>

@@ -4,7 +4,6 @@ import Circle from "../../../public/images/circle-accent-1.svg";
 import { TitleText } from "../../components/CustomTexts";
 import Navbar from "../../components/Navbar";
 import Button from "../../components/Button";
-import Image from "next/image";
 
 const Header = () => {
   return (
