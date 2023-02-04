@@ -5,6 +5,7 @@ import { TypingText, TitleText } from "./CustomTexts";
 import ListClasses from "./ListClasses";
 import ListCategory from "./ListCategory";
 import Input from "./Input";
+import FormSelect from "./FormSelect";
 
 export {
   Footer,
@@ -15,4 +16,5 @@ export {
   ListClasses,
   ListCategory,
   Input,
+  FormSelect,
 };
