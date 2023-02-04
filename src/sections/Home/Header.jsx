@@ -41,7 +41,7 @@ const Header = () => {
             </div>
             <Link
               href="/signup"
-              className="px-6 py-2 text-white font-medium z-10 hover:bg-primary-hover focus:ring-2 focus:ring-sky-300 transition-all ease-cubic-bezier duration-300 delay-0 active:bg-secondary-color drop-shadow-lg rounded-none text-sm bg-orange-400"
+              className="btn-primary rounded-none text-sm bg-orange-400"
             >
               Daftar Now
             </Link>

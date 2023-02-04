@@ -12,12 +12,27 @@
   scroll-behavior: smooth;
 }
 
-.gradient-01 {
-  left: 50%;
-  transform: translateX(-50%);
-  width: 515px;
-  height: 100%;
-  opacity: 0.8;
-  clip-path: polygon(46% 0%, 82% 0%, 67% 100%, 0% 100%);
-  background: transparent linear-gradient(130.09deg, #3d47bd 0%, #2e37a4 50.8%);
+@layer base {
+  .title-text {
+    @apply md:text-[42px] text-[34px] md:text-start text-center text-white font-semibold;
+  }
+  .p-text {
+    @apply font-medium text-[16px] text-secondary-black;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-secondary-color px-6 py-2 rounded-sm text-white font-medium z-10 hover:bg-primary-hover focus:ring-2 focus:ring-sky-300 transition-all ease-cubic-bezier duration-300 delay-0 active:bg-secondary-color drop-shadow-lg;
+  }
+  .gradient-01 {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 515px;
+    height: 100%;
+    opacity: 0.8;
+    clip-path: polygon(46% 0%, 82% 0%, 67% 100%, 0% 100%);
+    background: transparent
+      linear-gradient(130.09deg, #3d47bd 0%, #2e37a4 50.8%);
+  }
 }

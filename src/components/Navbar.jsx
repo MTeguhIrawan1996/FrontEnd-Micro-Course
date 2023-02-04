@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Navbar = (props) => {
   return (
-    <div
+    <nav
       className={`${styles.innerWidth} mx-auto flex justify-between items-center`}
     >
       <Logo className={`w-12 aspect-square ${props.iconStyle}`} />
@@ -20,22 +20,16 @@ const Navbar = (props) => {
           </Link>
         ))}
         {props.title === "Sign In" ? (
-          <Link
-            href="/signup"
-            className="bg-secondary-color px-6 py-2 rounded-sm text-white font-medium z-10 hover:bg-primary-hover focus:ring-2 focus:ring-sky-300 transition-all ease-cubic-bezier duration-300 delay-0 active:bg-secondary-color drop-shadow-lg"
-          >
+          <Link href="/signup" className="btn-primary">
             Daftar
           </Link>
         ) : (
-          <Link
-            href="/signin"
-            className="bg-secondary-color px-6 py-2 rounded-sm text-white font-medium z-10 hover:bg-primary-hover focus:ring-2 focus:ring-sky-300 transition-all ease-cubic-bezier duration-300 delay-0 active:bg-secondary-color drop-shadow-lg"
-          >
+          <Link href="/signin" className="btn-primary">
             Masuk
           </Link>
         )}
       </div>
-    </div>
+    </nav>
   );
 };
 

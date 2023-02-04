@@ -70,7 +70,7 @@ const SignIn = () => {
               </form>
               <Link
                 href="/"
-                className="px-6 py-2 text-white font-medium z-10 hover:bg-primary-hover focus:ring-2 focus:ring-sky-300 transition-all ease-cubic-bezier duration-300 delay-0 active:bg-secondary-color drop-shadow-lg rounded-none text-sm bg-orange-400 lg:w-[80%] w-full text-center"
+                className="btn-primary rounded-none text-sm bg-orange-400 lg:w-[80%] w-full text-center"
               >
                 Masuk
               </Link>
