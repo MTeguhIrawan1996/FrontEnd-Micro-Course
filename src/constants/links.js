@@ -1,5 +1,5 @@
 const links = [
-  { name: "Home", to: "/coba" },
+  { name: "Home", to: "/" },
   { name: "Pricing", to: "/about" },
   { name: "Features", to: "/work" },
   { name: "Story", to: "/skills" },

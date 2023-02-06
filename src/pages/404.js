@@ -10,13 +10,15 @@ const Custom404 = () => {
     <Layout title="404">
       <section className="h-screen p-16">
         <div className="flex flex-col justify-center items-center h-full">
-          <div className="h-[250px] aspect-square">
+          <div className="h-[250px] aspect-square relative">
             <Image
               src={Img404}
               alt="404"
-              width={500}
-              height={500}
+              fill
               className="h-full w-full object-contain mx-auto"
+              quality={100}
+              sizes="max-w-full"
+              priority
             />
           </div>
           <div className="flex justify-center items-center flex-col w-full">

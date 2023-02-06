@@ -3,6 +3,7 @@ import IconPlay from "../../public/images/icon-play.svg";
 import { clases } from "../constants";
 import Image from "next/image";
 import { TitleText } from "../components";
+import Link from "next/link";
 
 const ListClasses = () => {
   return (
@@ -12,17 +13,21 @@ const ListClasses = () => {
           className="flex flex-col justify-center items-start"
           key={`${data.title}-${i}`}
         >
-          <div className="h-[170px] min-w-full rounded-lg overflow-hidden relative">
+          <div className="h-[170px] w-full rounded-lg overflow-hidden relative">
             <Image
               src={data.imgUrl}
-              width={"auto"}
-              height={"auto"}
+              fill
+              quality={80}
               alt={data.title}
               className="w-full h-full object-cover"
+              priority
+              sizes="max-w-full"
             />
             <div className="absolute opacity-0 hover:opacity-100 bg-primary-hover/10 inset-0 backdrop-blur-sm transition-all ease-linear duration-300 delay-0 cursor-pointer flex justify-center items-center w-full group">
               <div className="w-[50px] opacity-0 aspect-square bg-orange-400 flex justify-center items-center rounded-full group-hover:opacity-100 transition-opacity ease-linear duration-[0.5s] delay-0">
-                <IconPlay className="w-[80%] aspect-square" />
+                <Link href={`/courses/${i + 1}`} className="w-full">
+                  <IconPlay className="w-[80%] aspect-square mx-auto text-transparent" />
+                </Link>
               </div>
             </div>
           </div>

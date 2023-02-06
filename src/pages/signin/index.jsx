@@ -81,17 +81,19 @@ const SignIn = () => {
               <Image
                 src="/signup.png"
                 alt="hero"
-                width={500}
-                height={500}
+                fill
                 className="object-cover h-full w-full"
+                sizes="max-w-full"
+                priority
+                quality={100}
               />
             </div>
             <div className="flex flex-col justify-start items-start px-5 py-2 gap-2 bg-white w-[300px] absolute right-0 -translate-x-10 bottom-0 translate-y-14 rounded-lg shadow-lg shadow-primary-black/40 z-20">
               <h1 className="text-zinc-600 font-semibold">
-                Metode belajar yang santai seperti nonton drakor di Netflix
+                Semua sudah terarah dengan baik dan perlu ikuti saja
               </h1>
               <span className="text-zinc-400 font-light">
-                Alyssa, Apps Developer
+                Tamara, UX Designer
               </span>
             </div>
             <div className="border-solid border-2 border-secondary-color w-[360px] h-[442px] rounded-sm rounded-tl-[50px]" />

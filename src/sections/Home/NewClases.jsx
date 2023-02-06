@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../../styles";
 import { ListClasses, TitleText, TypingText } from "../../components";
+import Link from "next/link";
 
 const NewClases = () => {
   return (
@@ -20,10 +21,12 @@ const NewClases = () => {
               textStyles="md:text-[24px] text-[18px] text-primary-black"
             />
           </div>
-          <TypingText
-            title="View All Courses"
-            textStyles="cursor-pointer text-[12px] underline underline-offset-2 hover:text-primary-hover"
-          />
+          <Link
+            href={`/courses`}
+            className="p-text cursor-pointer text-[12px] underline underline-offset-2 hover:text-primary-hover"
+          >
+            View All Courses
+          </Link>
         </div>
         <ListClasses />
       </div>
