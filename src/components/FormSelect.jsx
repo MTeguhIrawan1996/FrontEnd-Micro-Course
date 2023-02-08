@@ -34,7 +34,7 @@ const FormSelect = ({
           className={`flex justify-between items-center px-4 py-2 bg-white text-sm font-normal w-full max-w-full drop-shadow-lg group cursor-pointer ${
             styleInput ? styleInput : ""
           }`}
-          onClick={() => setOpen(!open)}
+          onClick={() => setOpen((prev) => !prev)}
         >
           {value ? (
             <span className="font-normal text-primary-hover first-letter:uppercase">
@@ -50,8 +50,8 @@ const FormSelect = ({
           />
         </div>
         <div
-          className={`absolute left-0 w-full z-20 border-solid border-[1px] bg-white border-secondary-black mt-2 drop-shadow-lg overflow-y-auto transition-all duration-300 delay-0 ease-linear ${
-            open ? "block" : "hidden"
+          className={`absolute left-0 w-full z-20 border-solid border-[1px] bg-white border-secondary-black drop-shadow-lg overflow-y-auto max-h-40 transition-all duration-300 transform origin-top-right translate-y-1 ${
+            open ? "opacity-100 visible" : "opacity-0 invisible"
           }`}
         >
           {children.map((option, i) => (

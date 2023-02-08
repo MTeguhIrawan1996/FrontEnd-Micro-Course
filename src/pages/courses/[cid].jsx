@@ -1,7 +1,13 @@
 import React from "react";
 import { useRouter } from "next/router";
 import Layout from "../../pages/layout/layout";
-import { HeaderCourses } from "../../sections";
+import {
+  AboutCourses,
+  HeaderCourses,
+  ImageCourses,
+  OurInstructor,
+} from "../../sections";
+import WillLern from "../../sections/DetailCourses/WillLern";
 
 const DetailCourses = () => {
   const router = useRouter();
@@ -10,7 +16,10 @@ const DetailCourses = () => {
   return (
     <Layout>
       <HeaderCourses />
-      <div className="h-screen"></div>
+      <AboutCourses />
+      <ImageCourses />
+      <WillLern />
+      <OurInstructor />
     </Layout>
   );
 };
