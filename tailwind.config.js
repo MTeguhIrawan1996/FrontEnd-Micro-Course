@@ -25,7 +25,6 @@ module.exports = {
       },
       transitionTimingFunction: {
         "cubic-bezier": "cubic-bezier(.25,.01,.25,1)",
-        "out-flex": "cubic-bezier(0.05, 0.6, 0.4, 0.9)",
       },
       transitionDelay: {
         0: "0s",

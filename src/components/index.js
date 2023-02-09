@@ -7,6 +7,7 @@ import ListCategory from "./ListCategory";
 import Input from "./Input";
 import FormSelect from "./FormSelect";
 import ListImageCourses from "./ListImageCourses";
+import Star from "./Star";
 
 export {
   Footer,
@@ -19,4 +20,5 @@ export {
   Input,
   FormSelect,
   ListImageCourses,
+  Star,
 };

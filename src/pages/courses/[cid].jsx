@@ -6,8 +6,9 @@ import {
   HeaderCourses,
   ImageCourses,
   OurInstructor,
+  Testimonial,
+  WillLern,
 } from "../../sections";
-import WillLern from "../../sections/DetailCourses/WillLern";
 
 const DetailCourses = () => {
   const router = useRouter();
@@ -20,6 +21,7 @@ const DetailCourses = () => {
       <ImageCourses />
       <WillLern />
       <OurInstructor />
+      <Testimonial />
     </Layout>
   );
 };

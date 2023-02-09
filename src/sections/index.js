@@ -6,6 +6,8 @@ import HeaderCourses from "./DetailCourses/Header";
 import AboutCourses from "./DetailCourses/About";
 import ImageCourses from "./DetailCourses/ImageCourses";
 import OurInstructor from "./DetailCourses/OurInstructor";
+import WillLern from "./DetailCourses/WillLern";
+import Testimonial from "./DetailCourses/Testimonial";
 
 export {
   Header,
@@ -16,4 +18,6 @@ export {
   AboutCourses,
   ImageCourses,
   OurInstructor,
+  WillLern,
+  Testimonial,
 };

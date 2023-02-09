@@ -1,5 +1,5 @@
 import React from "react";
-import category from "../constants/category";
+import { category } from "../constants";
 
 const ListCategory = () => {
   return (

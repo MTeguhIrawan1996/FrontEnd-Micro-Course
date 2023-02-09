@@ -57,6 +57,7 @@ const Header = () => {
               fill
               quality={100}
               priority
+              placeholder="blur"
               className="object-contain z-10 h-full w-full bg-no-repeat bg-center"
               sizes="max-w-full"
             />

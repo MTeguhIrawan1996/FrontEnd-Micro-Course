@@ -1,18 +1,15 @@
 import React, { useEffect, useState } from "react";
 import styles from "../../styles";
 import { TitleText } from "../../components";
-import {
-  Accordion,
-  AccordionHeader,
-  AccordionBody,
-} from "@material-tailwind/react";
+import { Accordion, AccordionBody } from "@material-tailwind/react";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
-import learnList from "../../constants/learnlist";
 import IconPlay from "../../../public/images/icon-play.svg";
 import IconLock from "../../../public/images/icon-lock.svg";
+import { learnList } from "../../constants";
 
 const WillLern = () => {
   const [keys, setKeys] = useState([{ key: 0 }]);
+
   const handleClick = (key) => {
     setKeys((prevKeys) => {
       const filteredKeys = prevKeys.filter((k) => k.key !== key);

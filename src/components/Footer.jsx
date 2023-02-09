@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import styles from "../styles";
 import Link from "next/link";
-import footer from "../constants/footer";
 import Button from "./Button";
 import Input from "./Input";
+import { footer } from "../constants";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
