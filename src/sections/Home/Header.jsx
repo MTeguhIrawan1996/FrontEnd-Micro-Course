@@ -30,7 +30,7 @@ const Header = () => {
           <p className="text-white font-light text-sm md:text-start text-center w-full">
             We provide tons of pathskill that you can choose and focus on
           </p>
-          <div className="h-full flex md:justify-start justify-center items-center w-full">
+          <div className="flex md:justify-start justify-center items-center w-full">
             <div className="flex-1">
               <Input
                 placeholder="Your email"
@@ -39,11 +39,12 @@ const Header = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
                 autoComplete="off"
+                styleInput="h-10"
               />
             </div>
             <Link
               href="/signup"
-              className="btn-primary rounded-none text-sm bg-orange-400 min-h-full"
+              className="btn-primary rounded-none text-sm bg-orange-400 focus:ring-0 h-10 flex justify-center items-center"
             >
               Daftar Now
             </Link>
