@@ -42,7 +42,7 @@ const Footer = () => {
               <p className="text-secondary-black">
                 Submit your emil for new update
               </p>
-              <div className="flex md:justify-start justify-start items-start w-full">
+              <div className="flex md:justify-start justify-center items-center w-full">
                 <div className="flex-1">
                   <Input
                     placeholder="Your email"
