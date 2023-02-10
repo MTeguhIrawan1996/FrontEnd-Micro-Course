@@ -7,9 +7,9 @@ import { Testimonials } from "../../constants";
 
 const Testimonial = () => {
   return (
-    <section className={`sm:px-16 sm:py-8 px-6 py-6`}>
+    <section className={`px-6 py-6 sm:px-16 sm:py-8`}>
       <div
-        className={`${styles.innerWidth} lg:px-12 mx-auto flex justify-start items-start flex-col`}
+        className={`${styles.innerWidth} mx-auto flex flex-col items-start justify-start lg:px-12`}
       >
         <TitleText
           title={
@@ -19,22 +19,22 @@ const Testimonial = () => {
           }
           textStyles="md:text-[24px] text-[18px] text-primary-black mb-4"
         />
-        <div className="w-full flex flex-col justify-start items-start gap-8">
+        <div className="flex w-full flex-col items-start justify-start gap-8">
           {Testimonials.map((data, index) => (
             <div
-              className="w-full flex justify-start items-start flex-col gap-4"
+              className="flex w-full flex-col items-start justify-start gap-4"
               key={`Testimonial-${index}`}
             >
               <Star rating={data.rating} />
-              <div className="md:w-[50%] w-full">
+              <div className="w-full md:w-[50%]">
                 <p className="text-secondary-black">{data.desc}</p>
               </div>
-              <div className="w-full flex justify-start items-center gap-3 mt-2">
-                <div className="relative w-[60px] h-[60px] rounded-full overflow-hidden">
+              <div className="mt-2 flex w-full items-center justify-start gap-3">
+                <div className="relative h-[60px] w-[60px] overflow-hidden rounded-full">
                   <Image
                     src={TestiImg}
                     alt="Testimonial-01"
-                    className="object-cover w-full h-full mx-auto"
+                    className="mx-auto h-full w-full object-cover"
                     priority
                   />
                 </div>
@@ -43,7 +43,7 @@ const Testimonial = () => {
                     title={<>{data.name}</>}
                     textStyles="md:text-[16px] text-[12px] text-primary-black font-medium text-start"
                   />
-                  <p className="text-secondary-black font-medium text-sm">
+                  <p className="text-sm font-medium text-secondary-black">
                     {data.position}
                   </p>
                 </div>

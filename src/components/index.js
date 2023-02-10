@@ -9,6 +9,7 @@ import FormSelect from "./parts/FormSelect";
 import ListImageCourses from "./detailCourses/ListImageCourses";
 import Star from "./parts/Star";
 import Layout from "./layout/layout";
+import SideBar from "./parts/SideBar";
 
 export {
   Footer,
@@ -23,4 +24,5 @@ export {
   ListImageCourses,
   Star,
   Layout,
+  SideBar,
 };
