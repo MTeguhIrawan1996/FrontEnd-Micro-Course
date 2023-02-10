@@ -51,12 +51,15 @@ const Footer = () => {
                     onChange={(e) => setEmail(e.target.value)}
                     value={email}
                     autoComplete="off"
+                    styleInput="h-10"
                   />
                 </div>
-                <Button
-                  text="Daftar Now"
-                  styles="rounded-none text-sm bg-orange-400"
-                />
+                <Link
+                  href="/signup"
+                  className="btn-primary rounded-none text-sm bg-orange-400 focus:ring-0 h-10 flex justify-center items-center"
+                >
+                  Daftar Now
+                </Link>
               </div>
             </div>
           </div>
