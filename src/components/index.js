@@ -1,13 +1,14 @@
-import Footer from "./Footer";
-import Navbar from "./Navbar";
-import Button from "./Button";
-import { TypingText, TitleText } from "./CustomTexts";
-import ListClasses from "./ListClasses";
-import ListCategory from "./ListCategory";
-import Input from "./Input";
-import FormSelect from "./FormSelect";
-import ListImageCourses from "./ListImageCourses";
-import Star from "./Star";
+import Footer from "./parts/Footer";
+import Navbar from "./parts/Navbar";
+import Button from "./parts/Button";
+import { TypingText, TitleText } from "./parts/CustomTexts";
+import ListClasses from "./home/ListClasses";
+import ListCategory from "./home/ListCategory";
+import Input from "./parts/Input";
+import FormSelect from "./parts/FormSelect";
+import ListImageCourses from "./detailCourses/ListImageCourses";
+import Star from "./parts/Star";
+import Layout from "./layout/layout";
 
 export {
   Footer,
@@ -21,4 +22,5 @@ export {
   FormSelect,
   ListImageCourses,
   Star,
+  Layout,
 };

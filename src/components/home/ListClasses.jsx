@@ -1,8 +1,8 @@
 import React from "react";
-import IconPlay from "../../public/images/icon-play.svg";
-import { clases } from "../constants";
+import IconPlay from "../../../public/images/icon-play.svg";
+import { clases } from "../../constants";
 import Image from "next/image";
-import { TitleText } from "../components";
+import { TitleText } from "..";
 import Link from "next/link";
 
 const ListClasses = () => {

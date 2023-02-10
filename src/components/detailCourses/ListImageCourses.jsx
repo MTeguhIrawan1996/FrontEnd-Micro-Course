@@ -1,6 +1,6 @@
 import React from "react";
-import IconPreview from "../../public/images/icon-preview.svg";
-import { clases } from "../constants";
+import IconPreview from "../../../public/images/icon-preview.svg";
+import { clases } from "../../constants";
 import Image from "next/image";
 import Link from "next/link";
 

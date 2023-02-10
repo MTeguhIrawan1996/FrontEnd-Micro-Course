@@ -1,5 +1,5 @@
 import React from "react";
-import StarIcons from "../../public/images/star.svg";
+import StarIcons from "../../../public/images/star.svg";
 
 const Star = ({ rating }) => {
   return (

@@ -1,13 +1,17 @@
-import Layout from "./layout/layout";
+import { Layout } from "../components";
 import { Category, Header, NewClases, Partners } from "../sections";
 
 export default function Home() {
   return (
-    <Layout title="Halaman Utama">
+    <>
       <Header />
       <Partners />
       <NewClases />
       <Category />
-    </Layout>
+    </>
   );
 }
+
+Home.getLayout = function getLayout(page) {
+  return <Layout title="Online Courses">{page}</Layout>;
+};

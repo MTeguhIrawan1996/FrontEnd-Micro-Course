@@ -1,6 +1,6 @@
-import { links } from "../constants";
-import styles from "../styles";
-import Logo from "../../public/images/logo.svg";
+import { links } from "../../constants";
+import styles from "../../styles";
+import Logo from "../../../public/images/logo.svg";
 import Link from "next/link";
 
 const Navbar = (props) => {

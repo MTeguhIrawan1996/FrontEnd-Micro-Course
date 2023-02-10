@@ -1,6 +1,5 @@
 import React from "react";
 import { useRouter } from "next/router";
-import Layout from "../../pages/layout/layout";
 import {
   AboutCourses,
   HeaderCourses,
@@ -9,21 +8,26 @@ import {
   Testimonial,
   WillLern,
 } from "../../sections";
+import { Layout } from "../../components";
 
 const DetailCourses = () => {
   const router = useRouter();
   const { cid } = router.query;
 
   return (
-    <Layout>
+    <>
       <HeaderCourses />
       <AboutCourses />
       <ImageCourses />
       <WillLern />
       <OurInstructor />
       <Testimonial />
-    </Layout>
+    </>
   );
 };
 
 export default DetailCourses;
+
+DetailCourses.getLayout = function getLayout(page) {
+  return <Layout title="Detail Courses">{page}</Layout>;
+};

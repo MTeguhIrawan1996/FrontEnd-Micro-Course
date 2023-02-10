@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Footer } from "../../components";
+import { Footer } from "..";
 
 const layout = ({ children, title }) => {
   return (
@@ -12,7 +12,7 @@ const layout = ({ children, title }) => {
       </Head>
       <div className="bg-white overflow-hidden">
         <main>{children}</main>
-        {title !== "404" && <Footer />}
+        {title !== "404" && title !== "Dashboard" && <Footer />}
       </div>
     </>
   );

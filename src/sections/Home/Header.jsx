@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import styles from "../../styles";
 import Link from "next/link";
 import Image from "next/image";
-import { Input } from "../../components";
-import Navbar from "../../components/Navbar";
-import { TitleText } from "../../components/CustomTexts";
+import { Input, Navbar, TitleText } from "../../components";
 import Circle from "../../../public/images/circle-accent-1.svg";
 import Hero from "../../../public/images/hero.png";
 
