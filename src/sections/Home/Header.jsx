@@ -30,7 +30,7 @@ const Header = () => {
           <p className="text-white font-light text-sm md:text-start text-center w-full">
             We provide tons of pathskill that you can choose and focus on
           </p>
-          <div className="flex md:justify-start justify-center items-start w-full">
+          <div className="flex md:justify-start justify-center items-start w-full gap-1">
             <div className="flex-1">
               <Input
                 placeholder="Your email"

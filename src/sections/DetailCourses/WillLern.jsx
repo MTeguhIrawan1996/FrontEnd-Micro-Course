@@ -18,11 +18,6 @@ const WillLern = () => {
     });
   };
 
-  const customAnimation = {
-    mount: { scale: 1 },
-    unmount: { scale: 0.9 },
-  };
-
   const open = (i) => {
     return keys?.some((k) => k.key === i);
   };
@@ -42,7 +37,6 @@ const WillLern = () => {
         {learnList.map((data, i) => (
           <Accordion
             open={open(i)}
-            animate={customAnimation}
             key={`${data.title}-${i}`}
             className="w-full md:w-[70%] lg:w-[50%] drop-shadow-lg"
           >
