@@ -5,7 +5,7 @@ import Image from "next/image";
 import { TitleText } from "..";
 import Link from "next/link";
 
-const ListClasses = () => {
+const ListMyClass = () => {
   return (
     <div className="grid w-full grid-cols-2 gap-8 lg:grid-cols-4 lg:gap-4">
       {clases.map((data, i) => (
@@ -25,7 +25,7 @@ const ListClasses = () => {
             />
             <div className="group absolute inset-0 flex w-full cursor-pointer items-center justify-center rounded-lg bg-primary-hover/10 opacity-0 backdrop-blur-sm transition-all delay-0 duration-300 ease-linear hover:opacity-100">
               <div className="flex aspect-square w-[50px] items-center justify-center rounded-full bg-orange-400 opacity-0 transition-opacity delay-0 duration-[0.5s] ease-linear group-hover:opacity-100">
-                <Link href={`/courses/${i + 1}`} className="w-full">
+                <Link href={`/dashboard/${i + 1}`} className="w-full">
                   <IconPlay className="mx-auto aspect-square w-[80%] text-transparent" />
                 </Link>
               </div>
@@ -44,4 +44,4 @@ const ListClasses = () => {
   );
 };
 
-export default ListClasses;
+export default ListMyClass;

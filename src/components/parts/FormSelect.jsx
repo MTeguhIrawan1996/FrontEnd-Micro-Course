@@ -8,6 +8,7 @@ const FormSelect = ({
   value,
   styleInput,
   placeholder,
+  width,
 }) => {
   const [open, setOpen] = useState(false);
   const selectWrapper = useRef(null);
@@ -26,12 +27,15 @@ const FormSelect = ({
 
   return (
     <>
-      <div className="block lg:w-[80%] w-full relative" ref={selectWrapper}>
-        <span className="text-secondary-black block mb-2 first-letter:uppercase">
+      <div
+        className={`relative block w-full lg:w-[80%] ${width ?? width}`}
+        ref={selectWrapper}
+      >
+        <span className="mb-2 block text-secondary-black first-letter:uppercase">
           {name}
         </span>
         <div
-          className={`flex justify-between items-center px-4 py-2 bg-white text-sm font-normal w-full max-w-full drop-shadow-lg group cursor-pointer ${
+          className={`group flex w-full max-w-full cursor-pointer items-center justify-between bg-white px-4 py-2 text-sm font-normal drop-shadow-lg ${
             styleInput ? styleInput : ""
           }`}
           onClick={() => setOpen((prev) => !prev)}
@@ -50,13 +54,13 @@ const FormSelect = ({
           />
         </div>
         <div
-          className={`absolute left-0 w-full z-20 border-solid border-[1px] bg-white border-secondary-black drop-shadow-lg overflow-y-auto max-h-40 transition-all duration-300 transform origin-top-right translate-y-1 ${
-            open ? "opacity-100 visible" : "opacity-0 invisible"
+          className={`absolute left-0 z-20 max-h-40 w-full origin-top-right translate-y-1 transform overflow-y-auto border-[1px] border-solid border-secondary-black bg-white drop-shadow-lg transition-all duration-300 ${
+            open ? "visible opacity-100" : "invisible opacity-0"
           }`}
         >
           {children.map((option, i) => (
             <div
-              className="px-4 py-2 cursor-pointer hover:bg-secondary-black hover:text-white text-sm font-normal transition-all delay-0 duration-[0.1s] ease-linear"
+              className="cursor-pointer px-4 py-2 text-sm font-normal transition-all delay-0 duration-[0.1s] ease-linear hover:bg-secondary-black hover:text-white"
               key={i}
               onClick={() => {
                 onClick({ target: { name, value: option.props.value } });

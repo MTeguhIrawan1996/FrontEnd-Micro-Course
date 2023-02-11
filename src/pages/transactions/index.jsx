@@ -1,8 +1,8 @@
 import React from "react";
-import { Layout, ListMyClass, TitleText, TypingText } from "../../components";
+import { Layout, TitleText, TypingText } from "../../components";
 import styles from "../../styles";
 
-const Dashboard = () => {
+const Transactions = () => {
   return (
     <section className={`${styles.paddings} max-h-screen overflow-y-auto`}>
       <div
@@ -10,23 +10,19 @@ const Dashboard = () => {
       >
         <div className="flex w-full flex-col items-start justify-start">
           <TitleText
-            title={
-              <>
-                My <span className="text-primary-hover">Class</span>
-              </>
-            }
+            title={<>Transactions</>}
             textStyles="md:text-[24px] text-[18px] text-primary-black"
           />
-          <TypingText title="Continue learning to pursue your dreams" />
+          <TypingText title="Keep on track what you’ve invested" />
         </div>
-        <ListMyClass />
+        <div className="">Detail Transactions</div>
       </div>
     </section>
   );
 };
 
-export default Dashboard;
+export default Transactions;
 
-Dashboard.getLayout = function getLayout(page) {
+Transactions.getLayout = function getLayout(page) {
   return <Layout title="Dashboard">{page}</Layout>;
 };

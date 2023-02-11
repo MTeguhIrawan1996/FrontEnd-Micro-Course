@@ -7,20 +7,28 @@ import {
   PowerIcon,
 } from "@heroicons/react/24/solid";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import UserImg from "../../../public/images/user.png";
 import { TitleText } from "./CustomTexts";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const menuItems = [
-  { id: 1, label: "My Class", icon: PencilSquareIcon, link: "/" },
-  { id: 2, label: "Library", icon: BookOpenIcon, link: "/posts" },
-  { id: 3, label: "Transactions", icon: CreditCardIcon, link: "/users" },
-  { id: 4, label: "Settings", icon: Cog6ToothIcon, link: "/tutorials" },
+  { id: 1, label: "My Class", icon: PencilSquareIcon, link: "/dashboard" },
+  { id: 2, label: "Library", icon: BookOpenIcon, link: "/library" },
+  { id: 3, label: "Transactions", icon: CreditCardIcon, link: "/transactions" },
+  { id: 4, label: "Settings", icon: Cog6ToothIcon, link: "/settings" },
 ];
 
 const SideBar = () => {
+  const router = useRouter();
   const [toggleCollapse, setToggleCollapse] = useState(false);
+
+  const activeMenu = useMemo(() => {
+    const pathArray = router.pathname.split("/");
+    const cleanedPath = `/${pathArray[1]}`;
+    return menuItems.find((menu) => menu.link === cleanedPath);
+  }, [router.pathname]);
 
   return (
     <section
@@ -63,7 +71,9 @@ const SideBar = () => {
           {menuItems.map((menu, index) => (
             <Link
               href={menu.link}
-              className="group flex w-full items-center justify-start gap-4 rounded-md p-1 text-sm font-semibold text-zinc-300 transition-all delay-0 duration-300 ease-cubic-bezier hover:bg-primary-hover"
+              className={`group flex w-full items-center justify-start gap-4 rounded-md p-1 text-sm font-semibold text-zinc-300 transition-all delay-0 duration-300 ease-cubic-bezier hover:bg-primary-hover ${
+                activeMenu.id === menu.id && "bg-primary-hover"
+              }`}
               key={`menu-${index}`}
             >
               <menu.icon className="h-6 w-6 text-white" />

@@ -10,6 +10,7 @@ import ListImageCourses from "./detailCourses/ListImageCourses";
 import Star from "./parts/Star";
 import Layout from "./layout/layout";
 import SideBar from "./parts/SideBar";
+import ListMyClass from "./dashboard/ListMyClass";
 
 export {
   Footer,
@@ -25,4 +26,5 @@ export {
   Star,
   Layout,
   SideBar,
+  ListMyClass,
 };

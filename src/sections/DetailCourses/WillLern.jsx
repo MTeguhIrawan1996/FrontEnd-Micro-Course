@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useState } from "react";
 import styles from "../../styles";
 import { TitleText } from "../../components";
 import { Accordion, AccordionBody } from "@material-tailwind/react";
@@ -18,13 +18,17 @@ const WillLern = () => {
     });
   };
 
-  const open = (i) => {
-    return keys?.some((k) => k.key === i);
-  };
+  // Lebih baik
+  const open = useCallback(
+    (i) => {
+      return keys?.some((k) => k.key === i);
+    },
+    [keys]
+  );
   return (
-    <section className={`sm:px-16 sm:py-8 px-6 py-6`}>
+    <section className={`px-6 py-6 sm:px-16 sm:py-8`}>
       <div
-        className={`${styles.innerWidth} lg:px-12 mx-auto flex justify-start items-start flex-col`}
+        className={`${styles.innerWidth} mx-auto flex flex-col items-start justify-start lg:px-12`}
       >
         <TitleText
           title={
@@ -38,10 +42,10 @@ const WillLern = () => {
           <Accordion
             open={open(i)}
             key={`${data.title}-${i}`}
-            className="w-full md:w-[70%] lg:w-[50%] drop-shadow-lg"
+            className="w-full drop-shadow-lg md:w-[70%] lg:w-[50%]"
           >
             <div
-              className={`flex justify-between items-center px-4 py-2 bg-white text-sm font-normal w-full max-w-full group cursor-pointer border-solid border-[1px] border-zinc-400 ${
+              className={`group flex w-full max-w-full cursor-pointer items-center justify-between border-[1px] border-solid border-zinc-400 bg-white px-4 py-2 text-sm font-normal ${
                 keys?.some((k) => k.key === i)
                   ? ""
                   : learnList.length - 1 === i
@@ -68,7 +72,7 @@ const WillLern = () => {
                 } w-full bg-zinc-200`}
                 key={`${sublist.title}-${d}`}
               >
-                <div className="px-6 py-2 cursor-pointer hover:bg-secondary-black text-secondary-black group text-sm font-normal transition-all delay-0 duration-[0.1s] ease-linear flex justify-between items-center">
+                <div className="group flex cursor-pointer items-center justify-between px-6 py-2 text-sm font-normal text-secondary-black transition-all delay-0 duration-[0.1s] ease-linear hover:bg-secondary-black">
                   <span className="group-hover:text-white">
                     {sublist.title}
                   </span>
