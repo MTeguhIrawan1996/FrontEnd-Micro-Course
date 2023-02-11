@@ -18,13 +18,10 @@ const WillLern = () => {
     });
   };
 
-  // Lebih baik
-  const open = useCallback(
-    (i) => {
-      return keys?.some((k) => k.key === i);
-    },
-    [keys]
-  );
+  const open = (i) => {
+    return keys?.some((k) => k.key === i);
+  };
+
   return (
     <section className={`px-6 py-6 sm:px-16 sm:py-8`}>
       <div
@@ -46,7 +43,7 @@ const WillLern = () => {
           >
             <div
               className={`group flex w-full max-w-full cursor-pointer items-center justify-between border-[1px] border-solid border-zinc-400 bg-white px-4 py-2 text-sm font-normal ${
-                keys?.some((k) => k.key === i)
+                open(i)
                   ? ""
                   : learnList.length - 1 === i
                   ? "border-b-[1px]"

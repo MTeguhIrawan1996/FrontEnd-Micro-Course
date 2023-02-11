@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const ListMyClass = () => {
   return (
-    <div className="grid w-full grid-cols-2 gap-8 lg:grid-cols-4 lg:gap-4">
+    <div className="grid w-full grid-cols-1 gap-8 lg:grid-cols-4 lg:gap-4">
       {clases.map((data, i) => (
         <div
           className="flex flex-col items-start justify-center"
