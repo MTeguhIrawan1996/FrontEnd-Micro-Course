@@ -12,7 +12,7 @@ const layout = ({ children, title }) => {
       </Head>
       <div className="overflow-hidden bg-white">
         <div className="flex items-start justify-start">
-          {title !== "Online Courses" && <SideBar />}
+          {title !== "Online Courses" && title !== "404" && <SideBar />}
           <div className="flex-1">{children}</div>
         </div>
         {title !== "404" && title !== "Dashboard" && <Footer />}

@@ -30,8 +30,6 @@ const SideBar = () => {
     return menuItems.find((menu) => menu.link === cleanedPath);
   }, [router.pathname]);
 
-  console.log(activeMenu);
-
   return (
     <section
       className={`z-50 flex min-h-screen flex-col justify-between bg-footer-color px-6 pt-6 pb-4 transition-all delay-0 duration-300 ease-cubic-bezier sm:relative ${
@@ -74,7 +72,7 @@ const SideBar = () => {
             <Link
               href={menu.link}
               className={`group flex w-full items-center justify-start gap-4 rounded-md p-1 text-sm font-semibold text-zinc-300 transition-all delay-0 duration-300 ease-cubic-bezier hover:bg-primary-hover ${
-                activeMenu.id === menu.id && "bg-primary-hover"
+                activeMenu?.id === menu.id && "bg-primary-hover"
               }`}
               key={`menu-${index}`}
             >
