@@ -5,7 +5,7 @@ import styles from "../../styles";
 const Library = () => {
   return (
     <div className="max-h-screen overflow-y-auto">
-      <div className={`h-[200vh] ${styles.paddings}`}>Library</div>
+      <div className={`h-[200vh] ${styles.paddings}`}>Comming Soon</div>
     </div>
   );
 };

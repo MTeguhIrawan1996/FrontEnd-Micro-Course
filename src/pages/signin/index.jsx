@@ -104,5 +104,5 @@ const SignIn = () => {
 export default SignIn;
 
 SignIn.getLayout = function getLayout(page) {
-  return <Layout title="Sign In">{page}</Layout>;
+  return <Layout title="Online Courses">{page}</Layout>;
 };

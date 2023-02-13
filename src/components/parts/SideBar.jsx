@@ -30,6 +30,8 @@ const SideBar = () => {
     return menuItems.find((menu) => menu.link === cleanedPath);
   }, [router.pathname]);
 
+  console.log(activeMenu);
+
   return (
     <section
       className={`z-50 flex min-h-screen flex-col justify-between bg-footer-color px-6 pt-6 pb-4 transition-all delay-0 duration-300 ease-cubic-bezier sm:relative ${

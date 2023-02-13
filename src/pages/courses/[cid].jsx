@@ -29,5 +29,5 @@ const DetailCourses = () => {
 export default DetailCourses;
 
 DetailCourses.getLayout = function getLayout(page) {
-  return <Layout title="Detail Courses">{page}</Layout>;
+  return <Layout title="Online Courses">{page}</Layout>;
 };
