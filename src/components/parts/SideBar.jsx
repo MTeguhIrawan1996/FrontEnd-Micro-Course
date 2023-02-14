@@ -15,9 +15,9 @@ import { useRouter } from "next/router";
 
 const menuItems = [
   { id: 1, label: "My Class", icon: PencilSquareIcon, link: "/dashboard" },
-  { id: 2, label: "Library", icon: BookOpenIcon, link: "/library" },
-  { id: 3, label: "Transactions", icon: CreditCardIcon, link: "/transactions" },
-  { id: 4, label: "Settings", icon: Cog6ToothIcon, link: "/settings" },
+  { id: 2, label: "Transactions", icon: CreditCardIcon, link: "/transactions" },
+  { id: 3, label: "Settings", icon: Cog6ToothIcon, link: "/settings" },
+  { id: 4, label: "Library", icon: BookOpenIcon, link: "/courses" },
 ];
 
 const SideBar = () => {

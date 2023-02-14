@@ -1,7 +1,18 @@
 import React from "react";
+import { HeaderCourses, NewClases } from "../../sections";
+import { Layout } from "../../components";
 
-const AllClasses = () => {
-  return <div>AllClasses</div>;
+const Courses = () => {
+  return (
+    <>
+      <HeaderCourses />
+      <NewClases />
+    </>
+  );
 };
 
-export default AllClasses;
+export default Courses;
+
+Courses.getLayout = function getLayout(page) {
+  return <Layout title="Online Courses">{page}</Layout>;
+};

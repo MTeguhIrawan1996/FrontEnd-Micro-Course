@@ -3,20 +3,20 @@ import { category } from "../../constants";
 
 const ListCategory = () => {
   return (
-    <div className="grid xl:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-6 w-full">
+    <div className="grid w-full grid-cols-2 gap-6 md:grid-cols-3 xl:grid-cols-6">
       {category.map((data, i) => (
         <div
-          className="w-full border-solid border-[1px] border-zinc-300 rounded-sm group hover:bg-primary-color hover:shadow-lg hover:shadow-primary-color/40 hover:border-transparent cursor-pointer transition-all ease-linear duration-300 delay-0 overflow-hidden"
+          className="group w-full cursor-pointer overflow-hidden rounded-sm border-[1px] border-solid border-zinc-300 transition-all delay-0 duration-300 ease-linear hover:border-transparent hover:bg-primary-color hover:shadow-lg hover:shadow-primary-color/40"
           key={i}
         >
-          <div className="flex flex-col justify-between items-start px-4 py-6 gap-2 h-full">
-            <data.imgUrl className="text-secondary-black w-[40%] aspect-square group-hover:text-white" />
-            <div className="mt-10 flex flex-col justify-start items-start w-full gap-2">
-              <h2 className="text-primary-black text-lg font-normal group-hover:text-white">
+          <div className="flex h-full flex-col items-start justify-between gap-2 px-4 py-6">
+            <data.imgUrl className="aspect-square w-[40%] text-secondary-black group-hover:text-white" />
+            <div className="mt-10 flex w-full flex-col items-start justify-start gap-2">
+              <h2 className="text-lg font-normal text-primary-black group-hover:text-white">
                 {data.title}
               </h2>
-              <p className="text-secondary-black text-base font-normal group-hover:text-zinc-300">
-                12,493 Courses
+              <p className="text-base font-normal text-secondary-black group-hover:text-zinc-300">
+                {data.qty} Courses
               </p>
             </div>
           </div>

@@ -1,22 +1,22 @@
 import React from "react";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
+import { Layout } from "../../components";
 import {
   AboutCourses,
-  HeaderCourses,
+  HeaderDetailCourses,
   ImageCourses,
   OurInstructor,
   Testimonial,
   WillLern,
 } from "../../sections";
-import { Layout } from "../../components";
 
 const DetailCourses = () => {
-  const router = useRouter();
-  const { cid } = router.query;
+  // const router = useRouter();
+  // // const { cid } = router.query;
 
   return (
     <>
-      <HeaderCourses />
+      <HeaderDetailCourses />
       <AboutCourses />
       <ImageCourses />
       <WillLern />

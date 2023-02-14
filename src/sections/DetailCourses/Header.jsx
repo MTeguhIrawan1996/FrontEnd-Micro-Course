@@ -6,24 +6,25 @@ import DetailImage from "../../../public/images/clas1.png";
 import StudentIc from "../../../public/images/icon-nametag.svg";
 import VideoIc from "../../../public/images/icon-playback.svg";
 
-const HeaderCourses = () => {
+const HeaderDetailCourses = () => {
   return (
-    <section className={`${styles.xPaddings} pt-8 relative`}>
+    <section className={`${styles.xPaddings} relative pt-8`}>
       <Navbar iconStyle="text-white" linkStyle="text-white" title="Courses" />
-      <div className="h-full w-full absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 h-full w-full">
         <Image
           src={DetailImage}
           alt="Detail-Image"
           fill
-          quality={100}
-          className="object-cover z-0 bg-no-repeat bg-center h-full w-full"
+          quality={80}
+          placeholder="blur"
+          className="z-0 h-full w-full bg-center bg-no-repeat object-cover"
           priority
           sizes="max-w-full"
         />
       </div>
-      <div className="backdrop-brightness-50 bg-black/30 absolute inset-0 h-full" />
+      <div className="absolute inset-0 h-full bg-black/30 backdrop-brightness-50" />
       <div
-        className={`${styles.yPaddings} ${styles.innerWidth} lg:px-12 mx-auto flex flex-col items-center relative`}
+        className={`${styles.yPaddings} ${styles.innerWidth} relative mx-auto flex flex-col items-center lg:px-12`}
       >
         <div className="pt-40 pb-60">
           <TypingText
@@ -35,12 +36,12 @@ const HeaderCourses = () => {
             textStyles="md:text-[60px] text-[40px] text-primary-hover text-center"
           />
         </div>
-        <div className="lg:px-12 w-full absolute bottom-0 translate-y-[50%] flex justify-between items-center gap-4 lg:gap-24">
-          <div className="w-full bg-white p-6 lg:p-8 flex-1 shadow-lg shadow-primary-black/20 rounded-md flex flex-col md:flex-row justify-start items-center sm:items-start gap-4 overflow-hidden">
+        <div className="absolute bottom-0 flex w-full translate-y-[50%] items-center justify-between gap-4 lg:gap-24 lg:px-12">
+          <div className="flex w-full flex-1 flex-col items-center justify-start gap-4 overflow-hidden rounded-md bg-white p-6 shadow-lg shadow-primary-black/20 sm:items-start md:flex-row lg:p-8">
             <div className="w-[60%] md:w-[20%]">
-              <StudentIc className="text-primary-hover w-full aspect-square" />
+              <StudentIc className="aspect-square w-full text-primary-hover" />
             </div>
-            <div className="w-full flex flex-col items-center sm:items-start">
+            <div className="flex w-full flex-col items-center sm:items-start">
               <TitleText
                 title={`Student`}
                 textStyles="text-secondary-black text-xs md:text-sm text-start"
@@ -51,11 +52,11 @@ const HeaderCourses = () => {
               />
             </div>
           </div>
-          <div className="w-full bg-white p-6 lg:p-8 flex-1 shadow-lg shadow-primary-black/20 rounded-md flex flex-col md:flex-row justify-start items-center sm:items-start gap-4 overflow-hidden">
+          <div className="flex w-full flex-1 flex-col items-center justify-start gap-4 overflow-hidden rounded-md bg-white p-6 shadow-lg shadow-primary-black/20 sm:items-start md:flex-row lg:p-8">
             <div className="w-[60%] md:w-[20%]">
-              <VideoIc className="text-primary-hover w-full aspect-square" />
+              <VideoIc className="aspect-square w-full text-primary-hover" />
             </div>
-            <div className="w-full flex flex-col items-center sm:items-start">
+            <div className="flex w-full flex-col items-center sm:items-start">
               <TitleText
                 title={`Video`}
                 textStyles="text-secondary-black text-xs md:text-sm text-start"
@@ -66,11 +67,11 @@ const HeaderCourses = () => {
               />
             </div>
           </div>
-          <div className="w-full bg-white p-6 lg:p-8 flex-1 shadow-lg shadow-primary-black/20 rounded-md flex flex-col md:flex-row justify-start items-center sm:items-start gap-4 overflow-hidden">
+          <div className="flex w-full flex-1 flex-col items-center justify-start gap-4 overflow-hidden rounded-md bg-white p-6 shadow-lg shadow-primary-black/20 sm:items-start md:flex-row lg:p-8">
             <div className="w-[60%] md:w-[20%]">
-              <StudentIc className="text-primary-hover w-full aspect-square" />
+              <StudentIc className="aspect-square w-full text-primary-hover" />
             </div>
-            <div className="w-full flex flex-col items-center sm:items-start">
+            <div className="flex w-full flex-col items-center sm:items-start">
               <TitleText
                 title={`Certificate`}
                 textStyles="text-secondary-black text-xs md:text-sm"
@@ -87,4 +88,4 @@ const HeaderCourses = () => {
   );
 };
 
-export default HeaderCourses;
+export default HeaderDetailCourses;

@@ -10,7 +10,7 @@ const ListClasses = () => {
     <div className="grid w-full grid-cols-2 gap-8 lg:grid-cols-4 lg:gap-4">
       {clases.map((data, i) => (
         <div
-          className="flex flex-col items-start justify-center"
+          className="group flex flex-col items-start justify-center"
           key={`${data.title}-${i}`}
         >
           <div className="relative h-[170px] w-full overflow-hidden rounded-lg">
@@ -23,7 +23,7 @@ const ListClasses = () => {
               priority
               sizes="max-w-full"
             />
-            <div className="group absolute inset-0 flex w-full cursor-pointer items-center justify-center rounded-lg bg-primary-hover/10 opacity-0 backdrop-blur-sm transition-all delay-0 duration-300 ease-linear hover:opacity-100">
+            <div className="absolute inset-0 flex w-full cursor-pointer items-center justify-center rounded-lg bg-primary-hover/10 opacity-0 backdrop-blur-sm transition-all delay-0 duration-300 ease-linear group-hover:opacity-100">
               <div className="flex aspect-square w-[50px] items-center justify-center rounded-full bg-orange-400 opacity-0 transition-opacity delay-0 duration-[0.5s] ease-linear group-hover:opacity-100">
                 <Link href={`/courses/${i + 1}`} className="w-full">
                   <IconPlay className="mx-auto aspect-square w-[80%] text-transparent" />
@@ -33,7 +33,7 @@ const ListClasses = () => {
           </div>
           <TitleText
             title={<>{data.title}</>}
-            textStyles="text-primary-black md:text-[18px] text-[14px] mt-4"
+            textStyles="text-primary-black md:text-[18px] text-[14px] mt-4 group-hover:text-primary-hover transition-all delay-0 duration-300 ease-linear"
           />
           <p className="text-sm font-medium text-secondary-black">
             {data.level}
