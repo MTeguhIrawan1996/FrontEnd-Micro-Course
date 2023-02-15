@@ -9,6 +9,7 @@ import OurInstructor from "./DetailCourses/OurInstructor";
 import WillLern from "./DetailCourses/WillLern";
 import Testimonial from "./DetailCourses/Testimonial";
 import HeaderCourses from "./Courses/Header";
+import StickyPrice from "./DetailCourses/StickyPrice";
 
 export {
   Header,
@@ -22,4 +23,5 @@ export {
   OurInstructor,
   WillLern,
   Testimonial,
+  StickyPrice,
 };

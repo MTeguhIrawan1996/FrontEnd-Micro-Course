@@ -6,6 +6,7 @@ import {
   HeaderDetailCourses,
   ImageCourses,
   OurInstructor,
+  StickyPrice,
   Testimonial,
   WillLern,
 } from "../../sections";
@@ -22,6 +23,7 @@ const DetailCourses = () => {
       <WillLern />
       <OurInstructor />
       <Testimonial />
+      <StickyPrice />
     </>
   );
 };

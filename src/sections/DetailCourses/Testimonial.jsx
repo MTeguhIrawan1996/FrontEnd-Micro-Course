@@ -1,13 +1,34 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Star, TitleText } from "../../components";
 import Image from "next/image";
 import styles from "../../styles";
 import TestiImg from "../../../public/images/testiImg.png";
 import { Testimonials } from "../../constants";
+import { useDispatch } from "react-redux";
+import { setSticky } from "../../../features/stickySlice";
 
 const Testimonial = () => {
+  const dispatch = useDispatch();
+  const bottomRef = useRef(null);
+
+  useEffect(() => {
+    const sectionBottom =
+      bottomRef.current.offsetTop + bottomRef.current.offsetHeight;
+    const stickyMetaToggler = () => {
+      dispatch(
+        setSticky({
+          isSticky: window.pageYOffset <= sectionBottom - window.innerHeight,
+        })
+      );
+    };
+
+    window.addEventListener("scroll", stickyMetaToggler);
+    return () => {
+      window.removeEventListener("scroll", stickyMetaToggler);
+    };
+  }, [dispatch]);
   return (
-    <section className={`px-6 py-6 sm:px-16 sm:py-8`}>
+    <section className={`px-6 py-6 sm:px-16 sm:py-8`} ref={bottomRef}>
       <div
         className={`${styles.innerWidth} mx-auto flex flex-col items-start justify-start lg:px-12`}
       >

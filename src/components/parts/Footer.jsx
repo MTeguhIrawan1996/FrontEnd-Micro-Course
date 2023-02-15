@@ -5,19 +5,37 @@ import Input from "./Input";
 import { footer } from "../../constants";
 
 const Footer = () => {
+  // const dispatch = useDispatch();
   const [email, setEmail] = useState("");
+  // const footerRef = useRef(null);
+
+  // useEffect(() => {
+  //   const stickyOffsetTop = footerRef.current.offsetTop;
+  //   const stickyMetaToggler = () => {
+  //     dispatch(
+  //       setSticky({
+  //         isSticky: stickyOffsetTop >= window.pageYOffset + window.innerHeight,
+  //       })
+  //     );
+  //   };
+
+  //   window.addEventListener("scroll", stickyMetaToggler);
+  //   return () => {
+  //     window.removeEventListener("scroll", stickyMetaToggler);
+  //   };
+  // }, [dispatch]);
 
   return (
-    <footer className={`sm:px-16 px-6 pt-12 bg-footer-color mt-12`}>
-      <div className={`${styles.innerWidth} lg:px-12 mx-auto`}>
-        <div className="flex flex-col justify-between items-start">
-          <div className="flex flex-wrap justify-start items-start w-full gap-6">
+    <footer className={`mt-12 w-full bg-footer-color px-6 pt-12 sm:px-16`}>
+      <div className={`${styles.innerWidth} mx-auto lg:px-12`}>
+        <div className="flex flex-col items-start justify-between">
+          <div className="flex w-full flex-wrap items-start justify-start gap-6">
             {footer.map((data, i) => (
               <div
                 className={`${
                   i === 0 || i === 1
-                    ? "lg:flex-[2] w-[40%]"
-                    : "lg:flex-[3] w-full"
+                    ? "w-[40%] lg:flex-[2]"
+                    : "w-full lg:flex-[3]"
                 } flex flex-col gap-4 lg:w-full`}
                 key={i}
               >
@@ -27,7 +45,7 @@ const Footer = () => {
                     <li key={indexL}>
                       <Link
                         href={l.to}
-                        className="text-secondary-black cursor-pointer hover:text-primary-hover hover:underline hover:underline-offset-1"
+                        className="cursor-pointer text-secondary-black hover:text-primary-hover hover:underline hover:underline-offset-1"
                       >
                         {l.title}
                       </Link>
@@ -36,12 +54,12 @@ const Footer = () => {
                 </ul>
               </div>
             ))}
-            <div className="lg:flex-[4] flex flex-col gap-4 w-full">
+            <div className="flex w-full flex-col gap-4 lg:flex-[4]">
               <h2 className="text-lg text-white">Promotions</h2>
               <p className="text-secondary-black">
                 Submit your emil for new update
               </p>
-              <div className="flex md:justify-start justify-center items-center w-full">
+              <div className="flex w-full items-center justify-center md:justify-start">
                 <div className="flex-1">
                   <Input
                     placeholder="Your email"
@@ -55,14 +73,14 @@ const Footer = () => {
                 </div>
                 <Link
                   href="/signup"
-                  className="btn-primary rounded-none text-sm bg-orange-400 focus:ring-0 h-10 flex justify-center items-center"
+                  className="btn-primary flex h-10 items-center justify-center rounded-none bg-orange-400 text-sm focus:ring-0"
                 >
                   Daftar Now
                 </Link>
               </div>
             </div>
           </div>
-          <div className="border-solid border-t-[1px] border-secondary-black w-full p-8 text-center mt-12">
+          <div className="mt-12 w-full border-t-[1px] border-solid border-secondary-black p-8 text-center">
             <span className="text-sm text-secondary-black">
               {new Date().getFullYear()} Copyright Micro by Ondev. All Rights
               Reserved.
