@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Layout, TitleText, TypingText } from "../../components";
+import { Button, Layout, TitleText, TypingText } from "../../components";
 import styles from "../../styles";
 import dynamic from "next/dynamic";
 import {
@@ -22,71 +22,55 @@ const DetailMyCourses = () => {
       <div
         className={`${styles.innerWidth} mx-auto flex flex-col items-start justify-center gap-6`}
       >
-        <div className="flex w-full flex-col items-start justify-start">
-          <TitleText
-            title={
-              <>
-                Install <span className="text-primary-hover">Tools</span>
-              </>
-            }
-            textStyles="md:text-[24px] text-[18px] text-primary-black"
-          />
-          <TypingText title="Materi bagian Part I" />
-        </div>
-        <div className="flex h-[320px] w-full items-start md:h-[420px] md:w-[80%]">
-          <div className="h-full w-full">
+        <div className="flex h-[320px] w-full items-start overflow-hidden rounded-xl md:h-[520px]">
+          <div className="h-full w-full overflow-hidden">
             <ReactPlayer
-              url="https://www.youtube.com/watch?v=SAL2JZxpoGY"
+              url="https://www.youtube.com/watch?v=Sya_ET05N7E"
               width="100%"
               height="100%"
               controls
             />
           </div>
         </div>
-        <Accordion
-          open={open === 1}
-          icon={<ChevronDownIcon id={1} open={open} />}
-        >
-          <AccordionHeader onClick={() => handleOpen(1)}>
-            What is Material Tailwind?
-          </AccordionHeader>
-          <AccordionBody>
-            We&apos;re not always in the position that we want to be at.
-            We&apos;re constantly growing. We&apos;re constantly making
-            mistakes. We&apos;re constantly trying to express ourselves and
-            mistakes. We&apos;re constantly trying to express ourselves and
-            mistakes. We&apos;re constantly trying to express ourselves and
-            actualize our dreams.
-          </AccordionBody>
-        </Accordion>
-        <Accordion
-          open={open === 2}
-          icon={<ChevronDownIcon id={2} open={open} />}
-        >
-          <AccordionHeader onClick={() => handleOpen(2)}>
-            How to use Material Tailwind?
-          </AccordionHeader>
-          <AccordionBody>
-            We&apos;re not always in the position that we want to be at.
-            We&apos;re constantly growing. We&apos;re constantly making
-            mistakes. We&apos;re constantly trying to express ourselves and
-            actualize our dreams.
-          </AccordionBody>
-        </Accordion>
-        <Accordion
-          open={open === 3}
-          icon={<ChevronDownIcon id={3} open={open} />}
-        >
-          <AccordionHeader onClick={() => handleOpen(3)}>
-            What can I do with Material Tailwind?
-          </AccordionHeader>
-          <AccordionBody>
-            We&apos;re not always in the position that we want to be at.
-            We&apos;re constantly growing. We&apos;re constantly making
-            mistakes. We&apos;re constantly trying to express ourselves and
-            actualize our dreams.
-          </AccordionBody>
-        </Accordion>
+        <div className="mb-4 flex w-full flex-col items-start justify-center gap-4 md:flex-row md:items-center md:justify-between md:gap-0">
+          <div className="flex w-full flex-col items-start justify-start">
+            <TitleText
+              title={
+                <>
+                  Install <span className="text-primary-hover">Tools</span>
+                </>
+              }
+              textStyles="md:text-[24px] text-[18px] text-primary-black"
+            />
+            <TypingText title="Materi bagian Part I" />
+          </div>
+          <div className="flex w-full items-start justify-start gap-4 md:justify-end">
+            <Button text="Prev" styles="bg-orange-400 px-12 rounded-xl" />
+            <Button text="Next" styles="px-12 rounded-xl" />
+          </div>
+        </div>
+        <div className="flex flex-col items-start justify-start gap-2">
+          <Accordion
+            open={open === 1}
+            icon={<ChevronDownIcon id={1} open={open} />}
+            className="w-full bg-white px-4 py-2 text-sm font-normal drop-shadow-lg md:w-[70%] lg:w-[50%]"
+          >
+            <AccordionHeader
+              onClick={() => handleOpen(1)}
+              className={`group flex w-full max-w-full cursor-pointer items-center justify-between`}
+            >
+              What is Material Tailwind?
+            </AccordionHeader>
+            <AccordionBody>
+              We&apos;re not always in the position that we want to be at.
+              We&apos;re constantly growing. We&apos;re constantly making
+              mistakes. We&apos;re constantly trying to express ourselves and
+              mistakes. We&apos;re constantly trying to express ourselves and
+              mistakes. We&apos;re constantly trying to express ourselves and
+              actualize our dreams.
+            </AccordionBody>
+          </Accordion>
+        </div>
       </div>
     </section>
   );
