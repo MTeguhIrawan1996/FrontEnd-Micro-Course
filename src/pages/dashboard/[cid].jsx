@@ -55,53 +55,59 @@ const DetailMyCourses = () => {
             <div className="flex w-full items-start justify-start gap-4 md:justify-end">
               <Button
                 text="Prev"
-                styles="bg-orange-400 px-12 rounded-xl drop-shadow-none"
+                styles="bg-orange-400 px-12 rounded-xl drop-shadow-none w-full md:w-fit"
               />
-              <Button text="Next" styles="px-12 rounded-xl drop-shadow-none" />
+              <Button
+                text="Next"
+                styles="px-12 rounded-xl drop-shadow-none w-full md:w-fit"
+              />
             </div>
           </div>
-          <div className="hide-scrollbar flex max-h-[50vh] w-full flex-col items-start justify-start gap-2 overflow-hidden overflow-y-auto bg-yellow-400">
+          <div className="hide-scrollbar flex max-h-[75vh] w-full flex-col items-start justify-start gap-2 overflow-hidden overflow-y-auto">
             {learnList.map((data, i) => (
               <Accordion
                 open={open(i)}
-                className="w-full rounded-lg bg-zinc-200 px-4 py-6 text-sm font-normal md:w-[70%] lg:w-[50%]"
+                className="w-full rounded-lg bg-zinc-200 px-4 py-4 text-sm font-normal md:w-[70%] lg:w-[50%]"
                 key={`${data.title}-${i}`}
               >
                 <div
-                  onClick={() => {
-                    handleClick(i);
-                  }}
-                  className={`group flex w-full max-w-full cursor-pointer items-center justify-between`}
+                  className={`group flex w-full max-w-full items-center justify-between`}
                 >
-                  <span className="font-normal text-secondary-black first-letter:uppercase">
+                  <span className="font-normal text-primary-black first-letter:uppercase">
                     {data.title}
                   </span>
-                  <ChevronDownIcon
-                    className={`h-4 w-4 text-zinc-700 group-hover:text-zinc-400 ${
-                      open(i) && "rotate-180"
-                    }`}
-                  />
-                </div>
-                {data.list.map((sublist, d) => (
-                  // Elemnt List
-                  <AccordionBody
-                    className={`
-                } w-full bg-zinc-200`}
-                    key={`${sublist.title}-${d}`}
+                  <div
+                    className="h-8 w-8 cursor-pointer rounded-full bg-zinc-300 p-2"
+                    onClick={() => {
+                      handleClick(i);
+                    }}
                   >
-                    <div className="group flex cursor-pointer items-center justify-between px-6 py-2 text-sm font-normal text-secondary-black transition-all delay-0 duration-[0.1s] ease-linear hover:bg-secondary-black">
-                      <span className="group-hover:text-white">
-                        {sublist.title}
-                      </span>
+                    <ChevronDownIcon
+                      className={`h-4 w-4 text-zinc-700 group-hover:text-zinc-400 ${
+                        open(i) && "rotate-180"
+                      }`}
+                    />
+                  </div>
+                </div>
+                <AccordionBody
+                  className={`mt-2 flex w-full flex-col items-start justify-start gap-2`}
+                >
+                  {data.list.map((sublist, d) => (
+                    // Elemnt List
+                    <div
+                      className="group flex w-full cursor-pointer items-center justify-between rounded-2xl bg-secondary-black px-6 py-2 text-sm font-normal transition-all delay-0 duration-[0.1s] ease-linear hover:bg-primary-hover"
+                      key={`${sublist.title}-${d}`}
+                    >
+                      <span className="text-white">{sublist.title}</span>
                       {sublist.access && (
-                        <IconPlay className="h-5 w-5 group-hover:text-primary-hover" />
+                        <IconPlay className="h-5 w-5 text-yellow-400" />
                       )}
                       {!sublist.access && (
-                        <IconLock className="h-5 w-5 group-hover:text-red-400" />
+                        <IconLock className="h-5 w-5 text-red-400" />
                       )}
                     </div>
-                  </AccordionBody>
-                ))}
+                  ))}
+                </AccordionBody>
               </Accordion>
             ))}
           </div>
