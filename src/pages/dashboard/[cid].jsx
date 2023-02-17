@@ -32,44 +32,209 @@ const DetailMyCourses = () => {
             />
           </div>
         </div>
-        <div className="mb-4 flex w-full flex-col items-start justify-center gap-4 md:flex-row md:items-center md:justify-between md:gap-0">
-          <div className="flex w-full flex-col items-start justify-start">
-            <TitleText
-              title={
-                <>
-                  Install <span className="text-primary-hover">Tools</span>
-                </>
-              }
-              textStyles="md:text-[24px] text-[18px] text-primary-black"
-            />
-            <TypingText title="Materi bagian Part I" />
+        <div className="flex w-full flex-col items-center justify-center pb-8">
+          <div className="mb-4 flex w-full flex-col items-start justify-center gap-4 md:flex-row md:items-center md:justify-between md:gap-0">
+            <div className="flex w-full flex-col items-start justify-start">
+              <TitleText
+                title={
+                  <>
+                    Install <span className="text-primary-hover">Tools</span>
+                  </>
+                }
+                textStyles="md:text-[24px] text-[18px] text-primary-black"
+              />
+              <TypingText title="Materi bagian Part I" />
+            </div>
+            <div className="flex w-full items-start justify-start gap-4 md:justify-end">
+              <Button
+                text="Prev"
+                styles="bg-orange-400 px-12 rounded-xl drop-shadow-none"
+              />
+              <Button text="Next" styles="px-12 rounded-xl drop-shadow-none" />
+            </div>
           </div>
-          <div className="flex w-full items-start justify-start gap-4 md:justify-end">
-            <Button text="Prev" styles="bg-orange-400 px-12 rounded-xl" />
-            <Button text="Next" styles="px-12 rounded-xl" />
-          </div>
-        </div>
-        <div className="flex flex-col items-start justify-start gap-2">
-          <Accordion
-            open={open === 1}
-            icon={<ChevronDownIcon id={1} open={open} />}
-            className="w-full bg-white px-4 py-2 text-sm font-normal drop-shadow-lg md:w-[70%] lg:w-[50%]"
-          >
-            <AccordionHeader
-              onClick={() => handleOpen(1)}
-              className={`group flex w-full max-w-full cursor-pointer items-center justify-between`}
+          <div className="hide-scrollbar flex max-h-[260px] flex-col items-start justify-start gap-2 overflow-y-auto">
+            <Accordion
+              open={open === 1}
+              icon={<ChevronDownIcon id={1} open={open} />}
+              className="w-full bg-zinc-400 px-4 py-2 text-sm font-normal md:w-[70%] lg:w-[50%]"
             >
-              What is Material Tailwind?
-            </AccordionHeader>
-            <AccordionBody>
-              We&apos;re not always in the position that we want to be at.
-              We&apos;re constantly growing. We&apos;re constantly making
-              mistakes. We&apos;re constantly trying to express ourselves and
-              mistakes. We&apos;re constantly trying to express ourselves and
-              mistakes. We&apos;re constantly trying to express ourselves and
-              actualize our dreams.
-            </AccordionBody>
-          </Accordion>
+              <AccordionHeader
+                onClick={() => handleOpen(1)}
+                className={`group flex w-full max-w-full cursor-pointer items-center justify-between`}
+              >
+                What is Material Tailwind?
+              </AccordionHeader>
+              <AccordionBody>
+                We&apos;re not always in the position that we want to be at.
+                We&apos;re constantly growing. We&apos;re constantly making
+                mistakes. We&apos;re constantly trying to express ourselves and
+                mistakes. We&apos;re constantly trying to express ourselves and
+                mistakes. We&apos;re constantly trying to express ourselves and
+                actualize our dreams.
+              </AccordionBody>
+            </Accordion>
+            <Accordion
+              open={open === 2}
+              icon={<ChevronDownIcon id={2} open={open} />}
+              className="w-full bg-zinc-400 px-4 py-2 text-sm font-normal md:w-[70%] lg:w-[50%]"
+            >
+              <AccordionHeader
+                onClick={() => handleOpen(2)}
+                className={`group flex w-full max-w-full cursor-pointer items-center justify-between`}
+              >
+                What is Material Tailwind?
+              </AccordionHeader>
+              <AccordionBody>
+                We&apos;re not always in the position that we want to be at.
+                We&apos;re constantly growing. We&apos;re constantly making
+                mistakes. We&apos;re constantly trying to express ourselves and
+                mistakes. We&apos;re constantly trying to express ourselves and
+                mistakes. We&apos;re constantly trying to express ourselves and
+                actualize our dreams.
+              </AccordionBody>
+            </Accordion>
+            <Accordion
+              open={open === 3}
+              icon={<ChevronDownIcon id={3} open={open} />}
+              className="w-full bg-zinc-400 px-4 py-2 text-sm font-normal md:w-[70%] lg:w-[50%]"
+            >
+              <AccordionHeader
+                onClick={() => handleOpen(3)}
+                className={`group flex w-full max-w-full cursor-pointer items-center justify-between`}
+              >
+                What is Material Tailwind?
+              </AccordionHeader>
+              <AccordionBody>
+                We&apos;re not always in the position that we want to be at.
+                We&apos;re constantly growing. We&apos;re constantly making
+                mistakes. We&apos;re constantly trying to express ourselves and
+                mistakes. We&apos;re constantly trying to express ourselves and
+                mistakes. We&apos;re constantly trying to express ourselves and
+                actualize our dreams.
+              </AccordionBody>
+            </Accordion>
+            <Accordion
+              open={open === 1}
+              icon={<ChevronDownIcon id={1} open={open} />}
+              className="w-full bg-zinc-400 px-4 py-2 text-sm font-normal md:w-[70%] lg:w-[50%]"
+            >
+              <AccordionHeader
+                onClick={() => handleOpen(1)}
+                className={`group flex w-full max-w-full cursor-pointer items-center justify-between`}
+              >
+                What is Material Tailwind?
+              </AccordionHeader>
+              <AccordionBody>
+                We&apos;re not always in the position that we want to be at.
+                We&apos;re constantly growing. We&apos;re constantly making
+                mistakes. We&apos;re constantly trying to express ourselves and
+                mistakes. We&apos;re constantly trying to express ourselves and
+                mistakes. We&apos;re constantly trying to express ourselves and
+                actualize our dreams.
+              </AccordionBody>
+            </Accordion>
+            <Accordion
+              open={open === 2}
+              icon={<ChevronDownIcon id={2} open={open} />}
+              className="w-full bg-zinc-400 px-4 py-2 text-sm font-normal md:w-[70%] lg:w-[50%]"
+            >
+              <AccordionHeader
+                onClick={() => handleOpen(2)}
+                className={`group flex w-full max-w-full cursor-pointer items-center justify-between`}
+              >
+                What is Material Tailwind?
+              </AccordionHeader>
+              <AccordionBody>
+                We&apos;re not always in the position that we want to be at.
+                We&apos;re constantly growing. We&apos;re constantly making
+                mistakes. We&apos;re constantly trying to express ourselves and
+                mistakes. We&apos;re constantly trying to express ourselves and
+                mistakes. We&apos;re constantly trying to express ourselves and
+                actualize our dreams.
+              </AccordionBody>
+            </Accordion>
+            <Accordion
+              open={open === 3}
+              icon={<ChevronDownIcon id={3} open={open} />}
+              className="w-full bg-zinc-400 px-4 py-2 text-sm font-normal md:w-[70%] lg:w-[50%]"
+            >
+              <AccordionHeader
+                onClick={() => handleOpen(3)}
+                className={`group flex w-full max-w-full cursor-pointer items-center justify-between`}
+              >
+                What is Material Tailwind?
+              </AccordionHeader>
+              <AccordionBody>
+                We&apos;re not always in the position that we want to be at.
+                We&apos;re constantly growing. We&apos;re constantly making
+                mistakes. We&apos;re constantly trying to express ourselves and
+                mistakes. We&apos;re constantly trying to express ourselves and
+                mistakes. We&apos;re constantly trying to express ourselves and
+                actualize our dreams.
+              </AccordionBody>
+            </Accordion>
+            <Accordion
+              open={open === 1}
+              icon={<ChevronDownIcon id={1} open={open} />}
+              className="w-full bg-zinc-400 px-4 py-2 text-sm font-normal md:w-[70%] lg:w-[50%]"
+            >
+              <AccordionHeader
+                onClick={() => handleOpen(1)}
+                className={`group flex w-full max-w-full cursor-pointer items-center justify-between`}
+              >
+                What is Material Tailwind?
+              </AccordionHeader>
+              <AccordionBody>
+                We&apos;re not always in the position that we want to be at.
+                We&apos;re constantly growing. We&apos;re constantly making
+                mistakes. We&apos;re constantly trying to express ourselves and
+                mistakes. We&apos;re constantly trying to express ourselves and
+                mistakes. We&apos;re constantly trying to express ourselves and
+                actualize our dreams.
+              </AccordionBody>
+            </Accordion>
+            <Accordion
+              open={open === 2}
+              icon={<ChevronDownIcon id={2} open={open} />}
+              className="w-full bg-zinc-400 px-4 py-2 text-sm font-normal md:w-[70%] lg:w-[50%]"
+            >
+              <AccordionHeader
+                onClick={() => handleOpen(2)}
+                className={`group flex w-full max-w-full cursor-pointer items-center justify-between`}
+              >
+                What is Material Tailwind?
+              </AccordionHeader>
+              <AccordionBody>
+                We&apos;re not always in the position that we want to be at.
+                We&apos;re constantly growing. We&apos;re constantly making
+                mistakes. We&apos;re constantly trying to express ourselves and
+                mistakes. We&apos;re constantly trying to express ourselves and
+                mistakes. We&apos;re constantly trying to express ourselves and
+                actualize our dreams.
+              </AccordionBody>
+            </Accordion>
+            <Accordion
+              open={open === 3}
+              icon={<ChevronDownIcon id={3} open={open} />}
+              className="w-full bg-zinc-400 px-4 py-2 text-sm font-normal md:w-[70%] lg:w-[50%]"
+            >
+              <AccordionHeader
+                onClick={() => handleOpen(3)}
+                className={`group flex w-full max-w-full cursor-pointer items-center justify-between`}
+              >
+                What is Material Tailwind?
+              </AccordionHeader>
+              <AccordionBody>
+                We&apos;re not always in the position that we want to be at.
+                We&apos;re constantly growing. We&apos;re constantly making
+                mistakes. We&apos;re constantly trying to express ourselves and
+                mistakes. We&apos;re constantly trying to express ourselves and
+                mistakes. We&apos;re constantly trying to express ourselves and
+                actualize our dreams.
+              </AccordionBody>
+            </Accordion>
+          </div>
         </div>
       </div>
     </section>
