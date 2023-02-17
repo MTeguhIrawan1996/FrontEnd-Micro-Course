@@ -53,58 +53,24 @@ const DetailMyCourses = () => {
               <Button text="Next" styles="px-12 rounded-xl drop-shadow-none" />
             </div>
           </div>
-          <div className="hide-scrollbar flex h-[50vh] flex-col items-start justify-start gap-2 overflow-y-auto bg-yellow-400">
+          <div className="hide-scrollbar flex max-h-[50vh] flex-col items-start justify-start gap-2 overflow-hidden overflow-y-auto bg-yellow-400">
             <Accordion
               open={open === 1}
-              icon={<ChevronDownIcon id={1} open={open} />}
-              className="w-full bg-zinc-400 px-4 py-2 text-sm font-normal md:w-[70%] lg:w-[50%]"
+              className="w-full rounded-lg bg-zinc-200 px-4 py-6 text-sm font-normal md:w-[70%] lg:w-[50%]"
             >
-              <AccordionHeader
+              <div
                 onClick={() => handleOpen(1)}
                 className={`group flex w-full max-w-full cursor-pointer items-center justify-between`}
               >
-                What is Material Tailwind?
-              </AccordionHeader>
-              <AccordionBody>
-                We&apos;re not always in the position that we want to be at.
-                We&apos;re constantly growing. We&apos;re constantly making
-                mistakes. We&apos;re constantly trying to express ourselves and
-                mistakes. We&apos;re constantly trying to express ourselves and
-                mistakes. We&apos;re constantly trying to express ourselves and
-                actualize our dreams.
-              </AccordionBody>
-            </Accordion>
-            <Accordion
-              open={open === 2}
-              icon={<ChevronDownIcon id={2} open={open} />}
-              className="w-full bg-zinc-400 px-4 py-2 text-sm font-normal md:w-[70%] lg:w-[50%]"
-            >
-              <AccordionHeader
-                onClick={() => handleOpen(2)}
-                className={`group flex w-full max-w-full cursor-pointer items-center justify-between`}
-              >
-                What is Material Tailwind?
-              </AccordionHeader>
-              <AccordionBody>
-                We&apos;re not always in the position that we want to be at.
-                We&apos;re constantly growing. We&apos;re constantly making
-                mistakes. We&apos;re constantly trying to express ourselves and
-                mistakes. We&apos;re constantly trying to express ourselves and
-                mistakes. We&apos;re constantly trying to express ourselves and
-                actualize our dreams.
-              </AccordionBody>
-            </Accordion>
-            <Accordion
-              open={open === 3}
-              icon={<ChevronDownIcon id={3} open={open} />}
-              className="w-full bg-zinc-400 px-4 py-2 text-sm font-normal md:w-[70%] lg:w-[50%]"
-            >
-              <AccordionHeader
-                onClick={() => handleOpen(3)}
-                className={`group flex w-full max-w-full cursor-pointer items-center justify-between`}
-              >
-                What is Material Tailwind?
-              </AccordionHeader>
+                <span className="font-normal text-secondary-black first-letter:uppercase">
+                  tes
+                </span>
+                <ChevronDownIcon
+                  className={`h-4 w-4 text-zinc-700 group-hover:text-zinc-400 ${
+                    open === 1 && "rotate-180"
+                  }`}
+                />
+              </div>
               <AccordionBody>
                 We&apos;re not always in the position that we want to be at.
                 We&apos;re constantly growing. We&apos;re constantly making
@@ -116,55 +82,21 @@ const DetailMyCourses = () => {
             </Accordion>
             <Accordion
               open={open === 1}
-              icon={<ChevronDownIcon id={1} open={open} />}
-              className="w-full bg-zinc-400 px-4 py-2 text-sm font-normal md:w-[70%] lg:w-[50%]"
+              className="w-full rounded-lg bg-zinc-200 px-4 py-6 text-sm font-normal md:w-[70%] lg:w-[50%]"
             >
-              <AccordionHeader
+              <div
                 onClick={() => handleOpen(1)}
                 className={`group flex w-full max-w-full cursor-pointer items-center justify-between`}
               >
-                What is Material Tailwind?
-              </AccordionHeader>
-              <AccordionBody>
-                We&apos;re not always in the position that we want to be at.
-                We&apos;re constantly growing. We&apos;re constantly making
-                mistakes. We&apos;re constantly trying to express ourselves and
-                mistakes. We&apos;re constantly trying to express ourselves and
-                mistakes. We&apos;re constantly trying to express ourselves and
-                actualize our dreams.
-              </AccordionBody>
-            </Accordion>
-            <Accordion
-              open={open === 2}
-              icon={<ChevronDownIcon id={2} open={open} />}
-              className="w-full bg-zinc-400 px-4 py-2 text-sm font-normal md:w-[70%] lg:w-[50%]"
-            >
-              <AccordionHeader
-                onClick={() => handleOpen(2)}
-                className={`group flex w-full max-w-full cursor-pointer items-center justify-between`}
-              >
-                What is Material Tailwind?
-              </AccordionHeader>
-              <AccordionBody>
-                We&apos;re not always in the position that we want to be at.
-                We&apos;re constantly growing. We&apos;re constantly making
-                mistakes. We&apos;re constantly trying to express ourselves and
-                mistakes. We&apos;re constantly trying to express ourselves and
-                mistakes. We&apos;re constantly trying to express ourselves and
-                actualize our dreams.
-              </AccordionBody>
-            </Accordion>
-            <Accordion
-              open={open === 3}
-              icon={<ChevronDownIcon id={3} open={open} />}
-              className="w-full bg-zinc-400 px-4 py-2 text-sm font-normal md:w-[70%] lg:w-[50%]"
-            >
-              <AccordionHeader
-                onClick={() => handleOpen(3)}
-                className={`group flex w-full max-w-full cursor-pointer items-center justify-between`}
-              >
-                What is Material Tailwind?
-              </AccordionHeader>
+                <span className="font-normal text-secondary-black first-letter:uppercase">
+                  tes
+                </span>
+                <ChevronDownIcon
+                  className={`h-4 w-4 text-zinc-700 group-hover:text-zinc-400 ${
+                    open === 1 && "rotate-180"
+                  }`}
+                />
+              </div>
               <AccordionBody>
                 We&apos;re not always in the position that we want to be at.
                 We&apos;re constantly growing. We&apos;re constantly making
@@ -176,15 +108,21 @@ const DetailMyCourses = () => {
             </Accordion>
             <Accordion
               open={open === 1}
-              icon={<ChevronDownIcon id={1} open={open} />}
-              className="w-full bg-zinc-400 px-4 py-2 text-sm font-normal md:w-[70%] lg:w-[50%]"
+              className="w-full rounded-lg bg-zinc-200 px-4 py-6 text-sm font-normal md:w-[70%] lg:w-[50%]"
             >
-              <AccordionHeader
+              <div
                 onClick={() => handleOpen(1)}
                 className={`group flex w-full max-w-full cursor-pointer items-center justify-between`}
               >
-                What is Material Tailwind?
-              </AccordionHeader>
+                <span className="font-normal text-secondary-black first-letter:uppercase">
+                  tes
+                </span>
+                <ChevronDownIcon
+                  className={`h-4 w-4 text-zinc-700 group-hover:text-zinc-400 ${
+                    open === 1 && "rotate-180"
+                  }`}
+                />
+              </div>
               <AccordionBody>
                 We&apos;re not always in the position that we want to be at.
                 We&apos;re constantly growing. We&apos;re constantly making
@@ -195,16 +133,22 @@ const DetailMyCourses = () => {
               </AccordionBody>
             </Accordion>
             <Accordion
-              open={open === 2}
-              icon={<ChevronDownIcon id={2} open={open} />}
-              className="w-full bg-zinc-400 px-4 py-2 text-sm font-normal md:w-[70%] lg:w-[50%]"
+              open={open === 1}
+              className="w-full rounded-lg bg-zinc-200 px-4 py-6 text-sm font-normal md:w-[70%] lg:w-[50%]"
             >
-              <AccordionHeader
-                onClick={() => handleOpen(2)}
+              <div
+                onClick={() => handleOpen(1)}
                 className={`group flex w-full max-w-full cursor-pointer items-center justify-between`}
               >
-                What is Material Tailwind?
-              </AccordionHeader>
+                <span className="font-normal text-secondary-black first-letter:uppercase">
+                  tes
+                </span>
+                <ChevronDownIcon
+                  className={`h-4 w-4 text-zinc-700 group-hover:text-zinc-400 ${
+                    open === 1 && "rotate-180"
+                  }`}
+                />
+              </div>
               <AccordionBody>
                 We&apos;re not always in the position that we want to be at.
                 We&apos;re constantly growing. We&apos;re constantly making
@@ -215,16 +159,48 @@ const DetailMyCourses = () => {
               </AccordionBody>
             </Accordion>
             <Accordion
-              open={open === 3}
-              icon={<ChevronDownIcon id={3} open={open} />}
-              className="w-full bg-zinc-400 px-4 py-2 text-sm font-normal md:w-[70%] lg:w-[50%]"
+              open={open === 1}
+              className="w-full rounded-lg bg-zinc-200 px-4 py-6 text-sm font-normal md:w-[70%] lg:w-[50%]"
             >
-              <AccordionHeader
-                onClick={() => handleOpen(3)}
+              <div
+                onClick={() => handleOpen(1)}
                 className={`group flex w-full max-w-full cursor-pointer items-center justify-between`}
               >
-                What is Material Tailwind?
-              </AccordionHeader>
+                <span className="font-normal text-secondary-black first-letter:uppercase">
+                  tes
+                </span>
+                <ChevronDownIcon
+                  className={`h-4 w-4 text-zinc-700 group-hover:text-zinc-400 ${
+                    open === 1 && "rotate-180"
+                  }`}
+                />
+              </div>
+              <AccordionBody>
+                We&apos;re not always in the position that we want to be at.
+                We&apos;re constantly growing. We&apos;re constantly making
+                mistakes. We&apos;re constantly trying to express ourselves and
+                mistakes. We&apos;re constantly trying to express ourselves and
+                mistakes. We&apos;re constantly trying to express ourselves and
+                actualize our dreams.
+              </AccordionBody>
+            </Accordion>
+            <Accordion
+              open={open === 1}
+              className="w-full rounded-lg bg-zinc-200 px-4 py-6 text-sm font-normal md:w-[70%] lg:w-[50%]"
+            >
+              <div
+                onClick={() => handleOpen(1)}
+                className={`group flex w-full max-w-full cursor-pointer items-center justify-between`}
+              >
+                <span className="font-normal text-secondary-black first-letter:uppercase">
+                  tes
+                </span>
+                <ChevronDownIcon
+                  className={`h-4 w-4 text-zinc-700 group-hover:text-zinc-400 ${
+                    open === 1 && "rotate-180"
+                  }`}
+                />
+              </div>
               <AccordionBody>
                 We&apos;re not always in the position that we want to be at.
                 We&apos;re constantly growing. We&apos;re constantly making
