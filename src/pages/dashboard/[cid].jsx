@@ -53,7 +53,7 @@ const DetailMyCourses = () => {
               <Button text="Next" styles="px-12 rounded-xl drop-shadow-none" />
             </div>
           </div>
-          <div className="hide-scrollbar flex max-h-[260px] flex-col items-start justify-start gap-2 overflow-y-auto">
+          <div className="hide-scrollbar flex h-[50vh] flex-col items-start justify-start gap-2 overflow-y-auto bg-yellow-400">
             <Accordion
               open={open === 1}
               icon={<ChevronDownIcon id={1} open={open} />}
