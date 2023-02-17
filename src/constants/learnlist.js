@@ -1,36 +1,41 @@
 const learnList = [
   {
+    id: 1,
     title: "Getting Started",
     list: [
       {
         title: "Intro Course",
         to: "/",
         access: true,
+        ytId: "Sya_ET05N7E",
       },
       {
-        title: "Part 1",
+        title: "Basic Css",
+        to: "/",
+        access: true,
+        ytId: "z-lBjxfhWeY",
+      },
+      {
+        title: "Overview",
         to: "/",
         access: false,
       },
       {
-        title: "Part2",
-        to: "/",
-        access: false,
-      },
-      {
-        title: "Part3",
+        title: "Basic Javasript",
         to: "/",
         access: false,
       },
     ],
   },
   {
+    id: 2,
     title: "Software You Need",
     list: [
       {
-        title: "Part 0",
+        title: "Instalasi Tools",
         to: "/",
         access: true,
+        ytId: "v4GPZoYWJ_Y",
       },
       {
         title: "Part 1",
@@ -50,6 +55,7 @@ const learnList = [
     ],
   },
   {
+    id: 3,
     title: "Basic Installation",
     list: [
       {
@@ -75,6 +81,7 @@ const learnList = [
     ],
   },
   {
+    id: 4,
     title: "Basic Installation",
     list: [
       {
@@ -100,6 +107,7 @@ const learnList = [
     ],
   },
   {
+    id: 5,
     title: "Basic Installation",
     list: [
       {
@@ -125,6 +133,7 @@ const learnList = [
     ],
   },
   {
+    id: 6,
     title: "Basic Installation",
     list: [
       {
