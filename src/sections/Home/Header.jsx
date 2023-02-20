@@ -1,22 +1,32 @@
 import React, { useState } from "react";
 import styles from "../../styles";
-import Link from "next/link";
 import Image from "next/image";
-import { Input, Navbar, TitleText } from "../../components";
+import { Button, Input, Navbar, TitleText } from "../../components";
 import Circle from "../../../public/images/circle-accent-1.svg";
 import Hero from "../../../public/images/hero.png";
+import { useDispatch } from "react-redux";
+import { setEmailSignUp } from "../../../features/signUpSlice";
+import { useRouter } from "next/router";
 
 const Header = () => {
   const [email, setEmail] = useState("");
+  const router = useRouter();
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    dispatch(setEmailSignUp({ emailState: email }));
+    router.push("/signup");
+  };
+
   return (
-    <section className={`${styles.xPaddings} py-8 relative bg-primary-color`}>
-      <div className="absolute top-0 gradient-01 z-0" />
-      <Circle className="absolute left-0 bottom-0 w-[20%] aspect-square" />
+    <section className={`${styles.xPaddings} relative bg-primary-color py-8`}>
+      <div className="gradient-01 absolute top-0 z-0" />
+      <Circle className="absolute left-0 bottom-0 aspect-square w-[20%]" />
       <Navbar iconStyle="text-white" linkStyle="text-white" />
       <div
-        className={`${styles.yPaddings} ${styles.innerWidth} mx-auto lg:px-12 lg:mt-20 lg:mb-12 flex lg:flex-row flex-col justify-center items-center lg:items-start lg:gap-0 gap-16`}
+        className={`${styles.yPaddings} ${styles.innerWidth} mx-auto flex flex-col items-center justify-center gap-16 lg:mt-20 lg:mb-12 lg:flex-row lg:items-start lg:gap-0 lg:px-12`}
       >
-        <div className="flex-[0.85] z-10 flex flex-col justify-center items-center gap-6">
+        <div className="z-10 flex flex-[0.85] flex-col items-center justify-center gap-6">
           <TitleText
             title={
               <>
@@ -25,10 +35,10 @@ const Header = () => {
               </>
             }
           />
-          <p className="text-white font-light text-sm md:text-start text-center w-full">
+          <p className="w-full text-center text-sm font-light text-white md:text-start">
             We provide tons of pathskill that you can choose and focus on
           </p>
-          <div className="flex md:justify-start justify-center items-center w-full">
+          <div className="flex w-full items-center justify-center md:justify-start">
             <div className="flex-1">
               <Input
                 placeholder="Your email"
@@ -40,16 +50,21 @@ const Header = () => {
                 styleInput="h-10"
               />
             </div>
-            <Link
+            {/* <Link
               href="/signup"
-              className="btn-primary rounded-none text-sm bg-orange-400 focus:ring-0 h-10 flex justify-center items-center"
+              className="btn-primary flex h-10 items-center justify-center rounded-none bg-orange-400 text-sm focus:ring-0"
             >
               Daftar Now
-            </Link>
+            </Link> */}
+            <Button
+              text="Daftar Now"
+              onClick={handleClick}
+              styles="rounded-none bg-orange-400 text-sm focus:ring-0 h-10"
+            />
           </div>
         </div>
-        <div className="flex-[1.15] z-10 w-full lg:flex hidden justify-center items-center relative">
-          <div className="z-10 rounded-tl-[50px] rounded-sm overflow-hidden w-[369px] h-[440px] absolute translate-y-6 translate-x-6">
+        <div className="relative z-10 hidden w-full flex-[1.15] items-center justify-center lg:flex">
+          <div className="absolute z-10 h-[440px] w-[369px] translate-y-6 translate-x-6 overflow-hidden rounded-sm rounded-tl-[50px]">
             <Image
               src={Hero}
               alt="hero"
@@ -57,19 +72,19 @@ const Header = () => {
               quality={100}
               priority
               placeholder="blur"
-              className="object-contain z-10 h-full w-full bg-no-repeat bg-center"
+              className="z-10 h-full w-full bg-center bg-no-repeat object-contain"
               sizes="max-w-full"
             />
           </div>
-          <div className="flex flex-col justify-start items-start px-5 py-2 gap-2 bg-white w-[300px] absolute right-0 -translate-x-10 top-0 -translate-y-6 rounded-lg shadow-lg shadow-primary-black/40 z-20">
-            <h1 className="text-zinc-600 font-semibold">
+          <div className="absolute right-0 top-0 z-20 flex w-[300px] -translate-x-10 -translate-y-6 flex-col items-start justify-start gap-2 rounded-lg bg-white px-5 py-2 shadow-lg shadow-primary-black/40">
+            <h1 className="font-semibold text-zinc-600">
               Metode belajar yang santai seperti nonton drakor di Netflix
             </h1>
-            <span className="text-zinc-400 font-light">
+            <span className="font-light text-zinc-400">
               Alyssa, Apps Developer
             </span>
           </div>
-          <div className="border-solid border-2 border-secondary-color w-[360px] h-[442px] rounded-sm rounded-tl-[50px]" />
+          <div className="h-[442px] w-[360px] rounded-sm rounded-tl-[50px] border-2 border-solid border-secondary-color" />
         </div>
       </div>
     </section>

@@ -3,16 +3,18 @@ import styles from "../../styles";
 import { FormSelect, Input, Layout, Navbar, TitleText } from "../../components";
 import Link from "next/link";
 import Image from "next/image";
+import { useSelector } from "react-redux";
 
 const SignUp = () => {
+  const { emailState } = useSelector((state) => state.signUp);
+
   const [formData, setformData] = useState({
     fullname: "",
-    email: "",
+    email: emailState,
     password: "",
     occupation: "",
   });
   const { email, password, fullname, occupation } = formData;
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setformData({ ...formData, [name]: value });

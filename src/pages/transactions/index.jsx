@@ -3,6 +3,7 @@ import { Button, Layout, TitleText, TypingText } from "../../components";
 import styles from "../../styles";
 import Image from "next/image";
 import { transactions } from "../../constants";
+import Link from "next/link";
 
 const Transactions = () => {
   return (
@@ -44,7 +45,12 @@ const Transactions = () => {
                 <TypingText title={data.date} textStyles="font-light" />
               </div>
             </div>
-            <Button text="Lihat Kelas" styles="bg-zinc-300 font-light" />
+            <Link
+              href={`/dashboard/${index}`}
+              className="btn-primary bg-zinc-300 font-light"
+            >
+              Lihat Kelas
+            </Link>
           </div>
         ))}
       </div>

@@ -36,7 +36,7 @@ const WillLern = () => {
           textStyles="md:text-[24px] text-[18px] text-primary-black mb-4"
         />
         <div className="hide-scrollbar flex max-h-[75vh] w-full flex-col items-start justify-start gap-2 overflow-hidden overflow-y-auto">
-          {learnList.map((data, i) => (
+          {learnList.data.map((data, i) => (
             <Accordion
               open={open(i)}
               className="w-full rounded-lg bg-zinc-200 px-4 py-4 text-sm font-normal md:w-[70%] lg:w-[50%]"
